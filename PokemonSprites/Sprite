@@ -1,0 +1,78 @@
+import json
+import tkinter as tk
+from tkinter import Canvas
+from PIL import Image, ImageTk
+import os
+
+def display_sprite(pokemonnumber):
+    # Load JSON data
+    json_path = os.path.join('PokemonSprites\\jsons', f'{pokemonnumber}.json')
+
+    with open(json_path, 'r') as f:
+        sprite_data = json.load(f)
+    
+    texture = sprite_data["textures"][0]
+    frames = texture["frames"]
+    scale = texture["scale"]  # Get the scale from JSON
+    scale = scale * 2
+    
+    # Corrected path to the image
+    image_path = os.path.join('PokemonSprites\\images', f'{pokemonnumber}.png')
+    sprite_image = Image.open(image_path)
+    
+    # Initialize Tkinter root window
+    root = tk.Tk()
+    
+    # Calculate canvas size based on the original size and scale
+    original_width = texture["size"]["w"]
+    original_height = texture["size"]["h"]
+    canvas_width = original_width * scale
+    canvas_height = original_height * scale
+    
+    # Create Tkinter canvas
+    canvas = Canvas(root, width=canvas_width, height=canvas_height)
+    canvas.pack()
+    
+    # Convert frames to Tkinter PhotoImage objects
+    tk_images = []
+    for frame_data in frames:
+        frame = frame_data["frame"]
+        x, y, w, h = frame["x"], frame["y"], frame["w"], frame["h"]
+        
+        # Crop the image to the sprite frame
+        sprite_frame = sprite_image.crop((x, y, x + w, y + h))
+        
+        # Resize the image based on scale
+        scaled_width = w * scale
+        scaled_height = h * scale
+        sprite_frame_resized = sprite_frame.resize((scaled_width, scaled_height))
+        
+        # Convert the image for Tkinter
+        tk_image = ImageTk.PhotoImage(sprite_frame_resized)
+        tk_images.append(tk_image)
+    
+    # Function to cycle through frames
+    def update_frame(idx):
+        canvas.delete("all")
+        
+        # Get the dimensions of the current image
+        current_image = tk_images[idx]
+        image_width = current_image.width()
+        image_height = current_image.height()
+        
+        # Calculate coordinates to center the image
+        x_pos = (canvas_width - image_width) // 2
+        y_pos = (canvas_height - image_height) // 2
+        
+        canvas.create_image(x_pos, y_pos, anchor=tk.NW, image=current_image)
+        canvas.after(100, update_frame, (idx + 1) % len(tk_images))
+
+    
+    # Start cycling through frames
+    update_frame(0)
+    
+    # Start Tkinter main loop
+    root.mainloop()
+
+# Run the function
+display_sprite("6")
