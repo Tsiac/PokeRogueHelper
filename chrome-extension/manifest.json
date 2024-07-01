@@ -1,0 +1,55 @@
+{
+    "manifest_version": 3,
+    "name": "Transparent Overlay",
+    "version": "1.0",
+    "description": "Displays a transparent, movable overlay on pokerogue.net",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting",
+      "webRequest"
+    ],
+    "host_permissions": [
+      "https://pokerogue.net/*",
+      "https://api.pokerogue.net/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": ["https://api.pokerogue.net/*", "https://pokerogue.net/*"],
+        "js": [
+            "inject.js",
+            "libs/localstorageutils.js",
+            "libs/httputils.js"
+        ],
+        "run_at": "document_start",
+        "all_frames": true
+      },
+      {
+        "matches": ["https://pokerogue.net/*"],
+        "js": ["content.js","libs/crypto-js.min.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["libs/display.js"],
+        "matches": ["<all_urls>"],
+        "extension_ids": []
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  
