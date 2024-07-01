@@ -42,6 +42,7 @@ if (touchControlsElement) {
 				)
 				let imagesrc = chrome.runtime.getURL('sprites/items/poke-ball.png'); 
 				let normalsrc = chrome.runtime.getURL('sprites/types/Normal.png'); 
+                let evensrc = chrome.runtime.getURL('sprites/effective/even.svg'); 
 
 				let pokemonGrid = 
 				`
@@ -58,9 +59,9 @@ if (touchControlsElement) {
 					).join('')}
 
 				</div>
-				<div class="pokemon-card" style="flex-direction: column;>
+				<div class="pokemon-card" style="flex-direction: column;">
 
-					<div class="pokemon-icon" style="display: flex;">
+					<div class="type-icon" style="display: flex;">
 						<img src="${normalsrc}">
 					</div>
 					
@@ -68,7 +69,7 @@ if (touchControlsElement) {
 						(pokemon) => {
 							return `
 							<div class="pokemon-icon" style="display: flex;">
-								<img src="${normalsrc}">
+								<img src="${evensrc}">
 							</div>
 							`
 						}

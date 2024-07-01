@@ -85,23 +85,18 @@
 .pokemon-icon img {
   width: var(--pkm-icon-size);
   height: var(--pkm-icon-size);
+  padding: 2px;
 }
 
 .pokemon-info {
   margin-top: 10px;
 }
 
-.type-icon {
-  --width: var(--type-icon-size);
-  --height: var(--type-icon-size);
-  width: var(--width);
-  height: var(--height);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left;
-  background-position-x: min(-0.03em, -1.15px);
+.type-icon img {
   border-radius: 50%;
-  margin: 0 5px;
+  padding: 2px;
+  width: var(--pkm-icon-size);
+  height: var(--pkm-icon-size);
 }
 
 /* .pokemon-types {
