@@ -34,7 +34,9 @@
     ],
     "web_accessible_resources": [
       {
-        "resources": ["libs/display.js"],
+        "resources": 
+        ["libs/display.js",
+        "sprites/*"],
         "matches": ["<all_urls>"],
         "extension_ids": []
       }

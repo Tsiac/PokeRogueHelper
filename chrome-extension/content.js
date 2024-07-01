@@ -36,22 +36,48 @@ if (touchControlsElement) {
 				var pokemonHtml = ``;
 				data.party.forEach(
 					(pokemon) => {
-						console.log('pokemon: ', pokemon)
+						console.log('pokemon: ', pokemonHtml)
 						pokemonHtml += createPokemon(pokemon.species)
 					}
 				)
-				// var div = `<div class="pokemon-card" style="flex-direction: column;">` 
-				// + pokemonHtml
-				// + `</div>` 
-
+				let imagesrc = chrome.runtime.getURL('sprites/items/poke-ball.png'); 
+				let normalsrc = chrome.runtime.getURL('sprites/types/Normal.png'); 
 
 				let pokemonGrid = 
-				`<div class="pokemon-card" style="flex-direction: column;">` 
-				+ pokemonHtml
-				+ `</div>` 
+				`
+				<div class="pokemon-card" style="flex-direction: column;"> 
 
+					<div class="pokemon-icon" style="display: flex;">
+						<img src="${imagesrc}">
+					</div>
+
+					${data.party.map(
+						(pokemon) => {
+							return createPokemon(pokemon.species)
+						}
+					).join('')}
+
+				</div>
+				<div class="pokemon-card" style="flex-direction: column;>
+
+					<div class="pokemon-icon" style="display: flex;">
+						<img src="${normalsrc}">
+					</div>
+					
+					${data.party.map(
+						(pokemon) => {
+							return `
+							<div class="pokemon-icon" style="display: flex;">
+								<img src="${normalsrc}">
+							</div>
+							`
+						}
+					).join('')}
+
+				</div>
+				` 
 				const overlay = document.getElementById('transparent-overlay')
-				overlay.innerHTML = div
+				overlay.innerHTML = pokemonGrid
 			} 
             // Maybe later
             else {
