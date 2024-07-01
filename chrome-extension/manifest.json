@@ -28,7 +28,8 @@
       },
       {
         "matches": ["https://pokerogue.net/*"],
-        "js": ["content.js","libs/crypto-js.min.js"]
+        "js": ["content.js","libs/crypto-js.min.js"],
+        "css": ["styles.css"]
       }
     ],
     "web_accessible_resources": [

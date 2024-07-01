@@ -29,7 +29,7 @@ window.fetch = async (...args) => {
     if (!response.url.includes('api.pokerogue.net/savedata/session?slot') &&
         !response.url.includes('api.pokerogue.net/savedata/updateall')) return response
 
-    let sessionSlotRegex = /.*\/session\?slot=(\d+).*/ 
+    let sessionSlotRegex = /sessionData(\d+).*/ 
     let slotId = -1
     if (sessionSlotRegex.test(response.url)){
         slotId = sessionSlotRegex.exec(response.url)[1]

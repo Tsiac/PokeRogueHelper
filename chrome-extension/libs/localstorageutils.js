@@ -6,7 +6,7 @@ class LocalStorageUtils {
 
 	static getCurrentSessionData(localStorage) { 
 
-		let regex = /sessionData(\d+).*/
+		let regex = /sessionData(\d+)*.*/
 		
 		Object.keys(localStorage).some((key) => {
 			if(regex.test(key)) {
@@ -15,12 +15,7 @@ class LocalStorageUtils {
 			}
 		})
 
-		var retData = CryptoJS.AES.decrypt(currentSessionData, saveKey).toString(CryptoJS.enc.Utf8);
-		
-		console.log('slotid: ', this.slotId)
-		console.log('currentSessionData: ', retData)
-
-		return JSON.parse(retData)
+		return JSON.parse(CryptoJS.AES.decrypt(currentSessionData, saveKey).toString(CryptoJS.enc.Utf8))
 	}
 
 	// static cleanSessionData() {

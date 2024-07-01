@@ -11,6 +11,7 @@ s.onload = function () {
 // receive message from injected script
 window.addEventListener('message', function (e) {
     if (e.data.type === 'GET_SAVEDATA') {
+
         browserapi.runtime.sendMessage({ type: 'BG_GET_SAVEDATA', data: e.data.data, slotId: e.data.slotId }, function(response) {
           if (response && response.success) {
             console.log('Successfully updated game info');

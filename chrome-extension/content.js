@@ -4,18 +4,18 @@ script.src = chrome.runtime.getURL('libs/display.js');
 
 // chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 // 	console.log("Got message:", message, "from", sender, "current message:", document.getElementById('touchControls').getAttribute('data-ui-mode'))
-// 	const uiMode = touchControlsElement.getAttribute('data-ui-mode')
-// 	console.log("Current ui mode: ", uiMode)
-// 	if (message.type === 'UPDATE_ENEMIES_DIV' || message.type === 'UPDATE_ALLIES_DIV') {
-// 		LocalStorageUtils.slotId = message.slotId
-// 		if (uiMode === 'SAVE_SLOT') LocalStorageUtils.cleanSessionData()
-// 		if (uiMode === 'TITLE' || uiMode === 'SAVE_SLOT') return sendResponse({ success: true })
+// 	// const uiMode = touchControlsElement.getAttribute('data-ui-mode')
+// 	// console.log("Current ui mode: ", uiMode)
+// 	// if (message.type === 'UPDATE_ENEMIES_DIV' || message.type === 'UPDATE_ALLIES_DIV') {
+// 	// 	LocalStorageUtils.slotId = message.slotId
+// 	// 	if (uiMode === 'SAVE_SLOT') LocalStorageUtils.cleanSessionData()
+// 	// 	if (uiMode === 'TITLE' || uiMode === 'SAVE_SLOT') return sendResponse({ success: true })
 
-// 		let divId = message.type === 'UPDATE_ENEMIES_DIV' ? 'enemies' : 'allies'
-// 		HttpUtils.updateFromMessage(message)
-// 		HttpUtils.createCardsDiv(divId)
-//     	sendResponse({ success: true });
-// 	}
+// 	// 	let divId = message.type === 'UPDATE_ENEMIES_DIV' ? 'enemies' : 'allies'
+// 	// 	HttpUtils.updateFromMessage(message)
+// 	// 	HttpUtils.createCardsDiv(divId)
+//     // 	sendResponse({ success: true });
+// 	// }
 // });
 
 const touchControlsElement = document.getElementById('touchControls')
@@ -30,11 +30,28 @@ if (touchControlsElement) {
 
             // These values are when the ui is at move select or loading into battle
 			if(newValue === "MESSAGE" || newValue === "COMMAND" || newValue === "CONFIRM") {
-				chrome.runtime.sendMessage({ 
-					type: 'BG_GET_SAVEDATA', 
-					data: LocalStorageUtils.getCurrentSessionData(localStorage), 
-					slotId: LocalStorageUtils.slotId 
-				})
+				
+				let data = LocalStorageUtils.getCurrentSessionData(localStorage)
+				
+				var pokemonHtml = ``;
+				data.party.forEach(
+					(pokemon) => {
+						console.log('pokemon: ', pokemon)
+						pokemonHtml += createPokemon(pokemon.species)
+					}
+				)
+				// var div = `<div class="pokemon-card" style="flex-direction: column;">` 
+				// + pokemonHtml
+				// + `</div>` 
+
+
+				let pokemonGrid = 
+				`<div class="pokemon-card" style="flex-direction: column;">` 
+				+ pokemonHtml
+				+ `</div>` 
+
+				const overlay = document.getElementById('transparent-overlay')
+				overlay.innerHTML = div
 			} 
             // Maybe later
             else {
@@ -48,4 +65,18 @@ if (touchControlsElement) {
 	});
 
 	observer.observe(touchControlsElement, { attributes: true });
+}
+
+
+function createPokemon(pokemonid)
+{
+  let pokemonImageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonid}.png`;
+
+  let cardHTML = `
+		<div class="pokemon-icon" style="display: flex;">
+			<img src="${pokemonImageUrl}">
+		</div>
+  `
+
+  return cardHTML;
 }
