@@ -2,22 +2,6 @@ const script = document.createElement('script');
 script.src = chrome.runtime.getURL('libs/display.js');
 (document.head || document.documentElement).appendChild(script);
 
-// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-// 	console.log("Got message:", message, "from", sender, "current message:", document.getElementById('touchControls').getAttribute('data-ui-mode'))
-// 	// const uiMode = touchControlsElement.getAttribute('data-ui-mode')
-// 	// console.log("Current ui mode: ", uiMode)
-// 	// if (message.type === 'UPDATE_ENEMIES_DIV' || message.type === 'UPDATE_ALLIES_DIV') {
-// 	// 	LocalStorageUtils.slotId = message.slotId
-// 	// 	if (uiMode === 'SAVE_SLOT') LocalStorageUtils.cleanSessionData()
-// 	// 	if (uiMode === 'TITLE' || uiMode === 'SAVE_SLOT') return sendResponse({ success: true })
-
-// 	// 	let divId = message.type === 'UPDATE_ENEMIES_DIV' ? 'enemies' : 'allies'
-// 	// 	HttpUtils.updateFromMessage(message)
-// 	// 	HttpUtils.createCardsDiv(divId)
-//     // 	sendResponse({ success: true });
-// 	// }
-// });
-
 const touchControlsElement = document.getElementById('touchControls')
 if (touchControlsElement) {
 	const observer = new MutationObserver((mutations) => {
@@ -33,14 +17,11 @@ if (touchControlsElement) {
 				
 				let sessionData = LocalStorageUtils.getCurrentSessionData(localStorage)
 				
-				// Load JSON data
+				// Load JSON data from file
 				fetch(chrome.runtime.getURL('json/effectiveness_chart.json'))
 					.then(response => response.json())
 					.then(data => {
-						effectiveness = data;
-						// You can use the loaded data to update the overlay content
-						// overlay.innerText = JSON.stringify(data); // Example of displaying JSON data in overlay
-						console.log('JSON Data:', effectiveness);
+						console.log('JSON Data:', data);
 
 
 						createPokemonEffectivenessGrid(sessionData)
@@ -48,9 +29,6 @@ if (touchControlsElement) {
 
 					})
 					.catch(error => console.error('Error loading JSON:', error));
-
-				console.log('JSON Data:', effectiveness);
-
 
 				createPokemonEffectivenessGrid(sessionData)
 			} 
@@ -72,9 +50,12 @@ function createPokemonEffectivenessGrid(data)
 			<img src="${imagesrc}">
 		</div>
 
-		${data.party.map(
-			(pokemon) => {
-				return createPokemon(pokemon.species)
+		${data.party.map((pokemon) =>
+		{
+			return pokemon.species;
+		}).sort().map(
+			(pokemonid) => {
+				return createPokemon(pokemonid)
 			}
 		).join('')}
 
@@ -102,6 +83,7 @@ function createPokemonEffectivenessGrid(data)
 			`
 		})}
 	` 
+
 	const overlay = document.getElementById('transparent-overlay')
 	overlay.innerHTML = pokemonGrid
 }

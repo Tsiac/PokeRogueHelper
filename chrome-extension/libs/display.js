@@ -2,6 +2,7 @@ function createOverlay() {
     const overlay = document.createElement('div');
     overlay.id = 'transparent-overlay';
     overlay.style.position = 'fixed';
+    overlay.style.padding = '5px';
 
     overlay.style.top = '50px'; // Positioning the overlay slightly away from the top left corner
     overlay.style.left = '50px';
