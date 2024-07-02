@@ -1,0 +1,116 @@
+import json
+
+# Load Effectness chart from JSON file
+with open('jsons\\defensive_effectiveness_chart.json', 'r') as f:
+    defensive_effectiveness_chart = json.load(f)
+
+# Load Effectness chart from JSON file
+with open('jsons\\offensive_effectiveness_chart.json', 'r') as f:
+    offensive_effectiveness_chart = json.load(f)
+
+# Load Effectness chart from JSON file
+with open('jsons\\pokemon_cache.json', 'r') as f:
+    pokemon_cache = json.load(f)
+
+def get_pokemon_types(pokemon_name):
+    for pokemon in pokemon_cache:
+        if pokemon['name'].lower() == pokemon_name.lower():
+            return pokemon['types']
+    return None
+
+def multiply_dicts(*dicts):
+    result = {}
+    
+    # Get all unique keys from all dictionaries
+    keys = set(key for d in dicts for key in d)
+    
+    # Iterate over each key
+    for key in keys:
+        # Initialize the product to 1
+        product = 1
+        # Multiply values from all dictionaries, assume 1 if key is missing
+        for d in dicts:
+            product *= d.get(key, 1)
+        # Store the result
+        result[key] = product
+    
+    return result
+
+def get_weaknesses_resistances(types):
+    first_type = defensive_effectiveness_chart[str.capitalize(types[0])]
+    second_type = defensive_effectiveness_chart[str.capitalize(types[1])]
+    
+    type_effectiveness = multiply_dicts(first_type, second_type)
+    
+    weaknesses = []
+    resistances = []
+    immunities = []
+
+    for type_name, effectiveness in type_effectiveness.items():
+        if effectiveness >= 2:
+            weaknesses.append((type_name, effectiveness))
+        elif 0 < effectiveness < 1:
+            resistances.append((type_name, effectiveness))
+        elif effectiveness == 0:
+            immunities.append(type_name)
+
+    # Sort weaknesses and resistances by effectiveness (descending)
+    weaknesses.sort(key=lambda x: x[1], reverse=True)
+    resistances.sort(key=lambda x: x[1])
+
+    return weaknesses, resistances, immunities
+
+def get_super_effective_against(types):
+
+    super_effective = []
+
+    first_type = offensive_effectiveness_chart[str.capitalize(types[0])]
+    second_type = offensive_effectiveness_chart[str.capitalize(types[1])]
+
+    for type_name, effectiveness in first_type.items():
+        if effectiveness >= 2:
+            super_effective.append((types[0], type_name))
+
+    for type_name, effectiveness in second_type.items():
+        if effectiveness >= 2:
+            super_effective.append((types[1], type_name))    
+
+    return super_effective
+
+def analyze_pokemon(pokemon_name):
+    types = get_pokemon_types(pokemon_name)
+    if not types:
+        print(f"Pokemon '{pokemon_name}' not found.")
+        return
+
+    print(f"{pokemon_name.capitalize()} (Types: {', '.join(types)})")
+    
+    weaknesses, resistances, immunities = get_weaknesses_resistances(types)
+    
+    print("\nWeaknesses:")
+    for type, multiplier in weaknesses:
+        print(f"  {type}: {multiplier:.2f}x")
+    
+    print("\nResistances:")
+    for type, multiplier in resistances:
+        print(f"  {type}: {multiplier:.2f}x")
+    
+    if immunities:
+        print("\nImmunities:")
+        for type in immunities:
+            print(f"  {type}: ")
+    
+    super_effective = get_super_effective_against(types)
+
+    print(super_effective)
+
+    print("\nSuper effective against:")
+    for offensive_type, defending_type in super_effective:
+        print(f"  {str.capitalize(offensive_type)}: {defending_type}")
+
+# Main loop
+while True:
+    pokemon_name = input("\nEnter a Pokemon name (or 'quit' to exit): ").strip().lower()
+    if pokemon_name == 'quit':
+        break
+    analyze_pokemon(pokemon_name)   
