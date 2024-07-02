@@ -7,12 +7,12 @@ from pokemon_data import load_pokemon_dict
 from utils import *
  
 # Load Effectness chart from JSON file
-with open('jsons\\effectiveness_chart.json', 'r') as f:
-    effectiveness_chart = json.load(f)
+with open('jsons\\offensive_effectiveness_chart.json', 'r') as f:
+    offensive_effectiveness_chart = json.load(f)
 
 pokemon_dict = load_pokemon_dict()
 
-types = effectiveness_chart.keys()
+types = offensive_effectiveness_chart.keys()
 
 def autocomplete(entry_widget, event=None):
     value = entry_widget.get().lower()
@@ -72,14 +72,14 @@ def update_moves(pokemon_name):
 def calculate_missing_types(selected_types):
     effective_against = set()
     for stype in selected_types:
-        effective_against.update(t for t, eff in effectiveness_chart[stype].items() if eff >= 2)
+        effective_against.update(t for t, eff in offensive_effectiveness_chart[stype].items() if eff >= 2)
     return [ptype for ptype in types if ptype not in effective_against]
 
 def find_minimal_cover(missing_types):
-    candidates = [stype for stype in types if any(effectiveness_chart[stype].get(mtype, 0) >= 2 for mtype in missing_types)]
+    candidates = [stype for stype in types if any(offensive_effectiveness_chart[stype].get(mtype, 0) >= 2 for mtype in missing_types)]
     for r in range(1, len(candidates) + 1):
         for combo in combinations(candidates, r):
-            if set(missing_types) <= set(t for stype in combo for t, eff in effectiveness_chart[stype].items() if eff >= 2):
+            if set(missing_types) <= set(t for stype in combo for t, eff in offensive_effectiveness_chart[stype].items() if eff >= 2):
                 return list(combo)
     return []
 
@@ -93,7 +93,7 @@ def show_vulnerability_result():
         for move_var in dropdown_vars_set:
             move_type = move_var.get()
             if move_type:
-                for affected_type, eff in effectiveness_chart[move_type].items():
+                for affected_type, eff in offensive_effectiveness_chart[move_type].items():
                     if eff >= 2:
                         team_super_effective_types[affected_type] = {"stab": move_type in (type1, type2), "super_effective": True}
 
@@ -111,14 +111,14 @@ def show_vulnerability_result():
         for move_var in dropdown_vars_set:
             move_type = move_var.get()
             if move_type:
-                for affected_type, eff in effectiveness_chart[move_type].items():
+                for affected_type, eff in offensive_effectiveness_chart[move_type].items():
                     if eff >= 2:
                         pokemon_super_effective_types[affected_type] = {"stab": move_type in (type1, type2), "super_effective": True}
 
         tk.Label(results_frame, text=f"{pokemon_name}\n({type1}, {type2})", relief="solid", width=15, height=2, bg="#E8E8E8", font=('Arial', 9, 'bold')).grid(row=row_index + 1, column=0, padx=2, pady=2)
 
         for col_index, atype in enumerate(types):
-            effectiveness = calculate_effectiveness(effectiveness_chart,atype, [type1, type2]) if type1 and type2 else calculate_effectiveness(effectiveness_chart,atype, [type1]) if type1 else 1.0
+            effectiveness = calculate_effectiveness(offensive_effectiveness_chart,atype, [type1, type2]) if type1 and type2 else calculate_effectiveness(offensive_effectiveness_chart,atype, [type1]) if type1 else 1.0
             text, text_color = {
                 4.0: ("4x", "#FF0000"),
                 2.0: ("2x", "#8B0000"),
@@ -232,7 +232,7 @@ def compare_rival_team():
                 move_type = move_var.get()
                 if move_type:
                     for rival_name, rival_type1, rival_type2 in rival_team:
-                        effectiveness = calculate_effectiveness(effectiveness_chart,move_type, [t for t in (rival_type1, rival_type2) if t])
+                        effectiveness = calculate_effectiveness(offensive_effectiveness_chart,move_type, [t for t in (rival_type1, rival_type2) if t])
                         user_team_effectiveness[pokemon_name][rival_name] = max(
                             user_team_effectiveness[pokemon_name].get(rival_name, 0),
                             effectiveness
@@ -241,8 +241,8 @@ def compare_rival_team():
             # Calculate rival team's effectiveness against user's Pokémon
             for rival_name, rival_type1, rival_type2 in rival_team:
                 rival_effectiveness = max(
-                    calculate_effectiveness(effectiveness_chart,rival_type1, [type1, type2]),
-                    calculate_effectiveness(effectiveness_chart,rival_type2, [type1, type2]) if rival_type2 else 0
+                    calculate_effectiveness(offensive_effectiveness_chart,rival_type1, [type1, type2]),
+                    calculate_effectiveness(offensive_effectiveness_chart,rival_type2, [type1, type2]) if rival_type2 else 0
                 )
                 rival_team_effectiveness[pokemon_name][rival_name] = rival_effectiveness
 
@@ -309,7 +309,7 @@ def compare_rival_team():
                 tk.Label(results_window, text=f"{rival_name}\n({rival_type1}, {rival_type2})", relief="solid", width=15, height=2, bg="#E8E8E8", font=('Arial', 9, 'bold')).grid(row=row_index+1, column=0, padx=2, pady=2)
 
                 for col_index, atype in enumerate(types):
-                    effectiveness = calculate_effectiveness(effectiveness_chart,atype, [rival_type1, rival_type2]) if rival_type2 else calculate_effectiveness(effectiveness_chart,atype, [rival_type1])
+                    effectiveness = calculate_effectiveness(offensive_effectiveness_chart,atype, [rival_type1, rival_type2]) if rival_type2 else calculate_effectiveness(offensive_effectiveness_chart,atype, [rival_type1])
                     text, text_color = {
                         4.0: ("4x", "#FFFFFF"),
                         2.0: ("2x", "#FFFFFF"),
@@ -352,7 +352,7 @@ def show_coverage_result():
     
     tk.Label(results_frame, text=f"Types needed to complete coverage ({len(minimal_cover)}): " + ", ".join(minimal_cover), bg="#C0C0C0", anchor="w").grid(row=1, column=0, columnspan=len(missing_types), sticky="w", pady=(5, 0))
 
-    cover_dict = {mtype: [ctype for ctype in minimal_cover if effectiveness_chart[ctype].get(mtype, 0) >= 2] for mtype in missing_types}
+    cover_dict = {mtype: [ctype for ctype in minimal_cover if offensive_effectiveness_chart[ctype].get(mtype, 0) >= 2] for mtype in missing_types}
 
     for col_index, mtype in enumerate(missing_types):
         types_text = "\n".join(cover_dict[mtype])
