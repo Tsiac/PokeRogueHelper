@@ -19,9 +19,9 @@
     "content_scripts": [{
         "matches": ["https://api.pokerogue.net/*", "https://pokerogue.net/*"],
         "js": [
-            "inject.js",
             "libs/localstorageutils.js",
-            "libs/httputils.js"
+            "libs/httputils.js",
+            "enums/Types.js"
         ],
         "run_at": "document_start",
         "all_frames": true
@@ -35,8 +35,11 @@
     "web_accessible_resources": [
       {
         "resources": 
-        ["libs/display.js",
-        "sprites/*"],
+        [
+          "libs/display.js",
+          "sprites/*",
+          "json/*"
+        ],
         "matches": ["<all_urls>"],
         "extension_ids": []
       }

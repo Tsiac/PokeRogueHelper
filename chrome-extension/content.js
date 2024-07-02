@@ -33,17 +33,19 @@ if (touchControlsElement) {
 				
 				let data = LocalStorageUtils.getCurrentSessionData(localStorage)
 				
-				var pokemonHtml = ``;
-				data.party.forEach(
-					(pokemon) => {
-						console.log('pokemon: ', pokemonHtml)
-						pokemonHtml += createPokemon(pokemon.species)
-					}
-				)
-				let imagesrc = chrome.runtime.getURL('sprites/items/poke-ball.png'); 
-				let normalsrc = chrome.runtime.getURL('sprites/types/Normal.png'); 
-                let evensrc = chrome.runtime.getURL('sprites/effective/even.svg'); 
+				// Load JSON data
+				fetch(chrome.runtime.getURL('json/effectiveness_chart.json'))
+					.then(response => response.json())
+					.then(data => {
+						console.log('JSON Data:', data);
+						// You can use the loaded data to update the overlay content
+						// overlay.innerText = JSON.stringify(data); // Example of displaying JSON data in overlay
+					})
+					.catch(error => console.error('Error loading JSON:', error));
 
+				let imagesrc = chrome.runtime.getURL('sprites/items/poke-ball.png')
+                let evensrc = chrome.runtime.getURL('sprites/effective/even.svg')
+				
 				let pokemonGrid = 
 				`
 				<div class="pokemon-card" style="flex-direction: column;"> 
@@ -59,23 +61,29 @@ if (touchControlsElement) {
 					).join('')}
 
 				</div>
-				<div class="pokemon-card" style="flex-direction: column;">
+				${Array(16).fill().map(
+					(x,i) => {
+						console.log(`sprites/types/${Types[i+1]}.png`)
+						return `
+							<div class="pokemon-card" style="flex-direction: column;">
 
-					<div class="type-icon" style="display: flex;">
-						<img src="${normalsrc}">
-					</div>
-					
-					${data.party.map(
-						(pokemon) => {
-							return `
-							<div class="pokemon-icon" style="display: flex;">
-								<img src="${evensrc}">
+							<div class="type-icon" style="display: flex;">
+								<img src="${chrome.runtime.getURL(`sprites/types/${Types[i+1]}.png`)}">
 							</div>
-							`
-						}
-					).join('')}
+							
+							${data.party.map(
+								(pokemon) => {
+									return `
+									<div class="pokemon-icon" style="display: flex;">
+										<img src="${evensrc}">
+									</div>
+									`
+								}
+							).join('')}
 
-				</div>
+						</div>
+						`
+					})}
 				` 
 				const overlay = document.getElementById('transparent-overlay')
 				overlay.innerHTML = pokemonGrid
