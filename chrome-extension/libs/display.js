@@ -4,8 +4,8 @@ function createOverlay() {
     overlay.style.position = 'fixed';
     overlay.style.padding = '5px';
 
-    overlay.style.top = '50px'; // Positioning the overlay slightly away from the top left corner
-    overlay.style.left = '50px';
+    overlay.style.top = '550px'; // Positioning the overlay slightly away from the top left corner
+    overlay.style.left = '80px';
 
     overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Adjust transparency here
     overlay.style.zIndex = '9999';

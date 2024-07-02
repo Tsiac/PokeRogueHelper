@@ -2,6 +2,23 @@ const script = document.createElement('script');
 script.src = chrome.runtime.getURL('libs/display.js');
 (document.head || document.documentElement).appendChild(script);
 
+let allPokemon = getResource('json/pokemon_cache.json');
+
+function getResource(filepath) {
+	return fetch(chrome.runtime.getURL(filepath))
+	.then(response => response.json())
+}
+
+function findPokemonType(pokemonid) {
+	
+	return allPokemon.then((pokemonList) => {
+		return pokemonList.find(x => x.id === pokemonid).types
+			.map(x => x[0].toUpperCase() + x.slice(1));
+	})
+}
+
+
+
 const touchControlsElement = document.getElementById('touchControls')
 if (touchControlsElement) {
 	const observer = new MutationObserver((mutations) => {
@@ -16,7 +33,7 @@ if (touchControlsElement) {
 			if(newValue === "MESSAGE" || newValue === "COMMAND" || newValue === "CONFIRM") {
 				
 				let sessionData = LocalStorageUtils.getCurrentSessionData(localStorage)
-				
+				console.log("sessiondata: ",sessionData)
 				// Load JSON data from file
 				fetch(chrome.runtime.getURL('json/effectiveness_chart.json'))
 					.then(response => response.json())
@@ -42,6 +59,11 @@ function createPokemonEffectivenessGrid(data)
 {
 	let imagesrc = chrome.runtime.getURL('sprites/items/poke-ball.png')
 	let evensrc = chrome.runtime.getURL('sprites/effective/even.svg')
+	
+	let sortedPokemon = data.party.map((pokemon) =>
+		{
+			return pokemon.species;
+		}).sort();
 
 	let pokemonGrid = `
 	<div class="pokemon-card" style="flex-direction: column;"> 
@@ -50,10 +72,7 @@ function createPokemonEffectivenessGrid(data)
 			<img src="${imagesrc}">
 		</div>
 
-		${data.party.map((pokemon) =>
-		{
-			return pokemon.species;
-		}).sort().map(
+		${sortedPokemon.map(
 			(pokemonid) => {
 				return createPokemon(pokemonid)
 			}
@@ -69,13 +88,23 @@ function createPokemonEffectivenessGrid(data)
 					<img src="${chrome.runtime.getURL(`sprites/types/${Types[i+1]}.png`)}">
 				</div>
 				
-				${data.party.map(
-					(pokemon) => {
-						return `
-						<div class="type-icon" style="display: flex;">
-							<img src="${evensrc}">
-						</div>
-						`
+				${sortedPokemon.map(
+					(pokemonid) => {
+						return findPokemonType(pokemonid).then(
+							(typeData) => {
+								// Get effectiveness total of attacking moves on current pokemon
+
+								// change source depending on icon to show
+
+								//return 
+								return `
+								<div class="type-icon" style="display: flex;">
+									<img src="${evensrc}">
+								</div>
+								`
+							}
+						)
+						
 					}
 				).join('')}
 
