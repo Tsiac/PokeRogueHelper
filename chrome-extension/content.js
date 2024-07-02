@@ -1,3 +1,32 @@
+const gridStyles = `
+.pokemon-effectiveness-grid {
+  display: grid;
+  grid-template-columns: auto repeat(16, 1fr);
+  gap: 2px;
+  background-color: #333;
+  padding: 5px;
+}
+
+.grid-cell {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-icon img, .type-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.effectiveness-icon {
+  width: 100%;
+  height: 100%;
+}
+`;
+
 const script = document.createElement('script');
 script.src = chrome.runtime.getURL('libs/display.js');
 (document.head || document.documentElement).appendChild(script);
@@ -86,117 +115,65 @@ if (touchControlsElement) {
 
             // These values are when the ui is at move select or loading into battle
 			if(newValue === "MESSAGE" || newValue === "COMMAND" || newValue === "CONFIRM") {
-				
-				let sessionData = LocalStorageUtils.getCurrentSessionData(localStorage)
-				console.log("sessiondata: ",sessionData)
-				// Load JSON data from file
-				fetch(chrome.runtime.getURL('json/effectiveness_chart.json'))
-					.then(response => response.json())
-					.then(data => {
-						createPokemonEffectivenessGrid(sessionData)
-
-
-					})
-					.catch(error => console.error('Error loading JSON:', error));
+				let sessionData = LocalStorageUtils.getCurrentSessionData(localStorage);
+				console.log("sessiondata: ", sessionData);
+				await createPokemonEffectivenessGrid(sessionData);
 			} 
 		});
 	});
 
 	observer.observe(touchControlsElement, { attributes: true });
 }
+async function createPokemonEffectivenessGrid(data) {
+    let pokeBallSrc = chrome.runtime.getURL('sprites/items/poke-ball.png');
+    let sortedPokemon = data.party.map((pokemon) => pokemon.species).sort();
 
-function createPokemonEffectivenessGrid(data)
-{
-	let imagesrc = chrome.runtime.getURL('sprites/items/poke-ball.png')
-	
-	let sortedPokemon = data.party.map((pokemon) =>
-		{
-			return pokemon.species;
-		}).sort();
+    // Inject CSS
+    const style = document.createElement('style');
+    style.textContent = gridStyles;
+    document.head.appendChild(style);
 
-	let pokemonGrid = `
-	<div class="pokemon-card" style="flex-direction: column;"> 
+    let gridHTML = `<div class="pokemon-effectiveness-grid">
+        <div class="grid-cell"></div>
+        ${Array(16).fill().map((_, i) => 
+            `<div class="grid-cell type-icon">
+                <img src="${chrome.runtime.getURL(`sprites/types/${Types[i+1]}.png`)}" alt="${getTypeNameByIndex(i+1)}">
+            </div>`
+        ).join('')}`;
 
-		<div class="pokemon-icon" style="display: flex;">
-			<img src="${imagesrc}">
-		</div>
+    for (let pokemonId of sortedPokemon) {
+        const pokemonTypes = await findPokemonType(pokemonId);
+        const effectiveTypes = await getDefensiveEffectiveness(pokemonTypes);
 
-		${sortedPokemon.map(
-			(pokemonid) => {
-				return createPokemon(pokemonid)
-			}
-		).join('')}
+        gridHTML += `
+        <div class="grid-cell pokemon-icon">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png" alt="Pokemon ${pokemonId}">
+        </div>`;
 
-	</div>
-	${Array(16).fill().map(
-		(x,i) => {
-			return `
-				<div class="pokemon-card" style="flex-direction: column;">
+        for (let i = 1; i <= 16; i++) {
+            const typeName = getTypeNameByIndex(i);
+            const effectiveness = effectiveTypes[capitalize(typeName)];
+            let effectivenessSrc;
 
-				<div class="type-icon" style="display: flex;">
-					<img src="${chrome.runtime.getURL(`sprites/types/${Types[i+1]}.png`)}">
-				</div>
-				
-				${sortedPokemon.map(
-					(pokemonid) => {
-						findPokemonType(pokemonid).then(
-							(currentPokemonTypes) => {
-								// Get effectiveness total of attacking moves on current pokemon
-								getDefensiveEffectiveness(currentPokemonTypes).then(
-									(effectiveTypes) => {
-										var alltypes = Array(16).fill().map(
-											(y,j) => {
-												return getTypeNameByIndex(j+1)
-											}
-										)
-										console.log('pokemon types: ', currentPokemonTypes)
-										console.log('et: ', effectiveTypes)
-										
-										var typesHTML = alltypes.map((t) => {
-											var modType = effectiveTypes[capitalize(t)]
+            if (effectiveness === 2) {
+                effectivenessSrc = chrome.runtime.getURL('sprites/effective/plus.svg');
+            } else if (effectiveness === 0.5) {
+                effectivenessSrc = chrome.runtime.getURL('sprites/effective/minus.svg');
+            } else {
+                effectivenessSrc = chrome.runtime.getURL('sprites/effective/even.svg');
+            }
 
-											let evenSrc = chrome.runtime.getURL('sprites/effective/even.svg')
-											let superEffectiveSrc = chrome.runtime.getURL('sprites/effective/plus.svg')
-											let notEffectiveSrc = chrome.runtime.getURL('sprites/effective/minus.svg')
-											
-											var Src = evenSrc
+            gridHTML += `
+            <div class="grid-cell effectiveness-icon">
+                <img src="${effectivenessSrc}" alt="${effectiveness}x effective">
+            </div>`;
+        }
+    }
 
-											if(modType === 2){
-												Src = superEffectiveSrc
-											}
+    gridHTML += '</div>';
 
-											if(modType === 0.5){
-												Src = notEffectiveSrc
-											}
-
-											console.log(Src)
-
-
-											return `
-												<div class="type-icon" style="display: flex;">
-													<img src="${Src}">
-												</div>
-											`
-										}).join('')
-										
-										console.log(typesHTML)
-
-										return typesHTML
-									} 
-								)
-							}
-						)
-						
-					}
-				).join('')}
-
-			</div>
-			`
-		})}
-	` 
-
-	const overlay = document.getElementById('transparent-overlay')
-	overlay.innerHTML = pokemonGrid
+    const overlay = document.getElementById('transparent-overlay');
+    overlay.innerHTML = gridHTML;
 }
 
 function createPokemon(pokemonid)
