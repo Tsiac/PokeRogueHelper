@@ -65,7 +65,7 @@ function createPokemonEffectivenessGrid(data)
 	let imagesrc = chrome.runtime.getURL('sprites/items/poke-ball.png')
 	let evensrc = chrome.runtime.getURL('sprites/effective/even.svg')
 
-	return`
+	let pokemonGrid = `
 	<div class="pokemon-card" style="flex-direction: column;"> 
 
 		<div class="pokemon-icon" style="display: flex;">
@@ -91,7 +91,7 @@ function createPokemonEffectivenessGrid(data)
 				${data.party.map(
 					(pokemon) => {
 						return `
-						<div class="pokemon-icon" style="display: flex;">
+						<div class="type-icon" style="display: flex;">
 							<img src="${evensrc}">
 						</div>
 						`

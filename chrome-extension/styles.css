@@ -5,7 +5,8 @@
   --font-size-l: min(2vh, 3vw);
   --font-size-xl: min(3vh, 3vw);
   --arrow-font-size: calc(var(--font-size) * 2);
-  --pkm-icon-size: min(10vh, 6vw);
+  /* --pkm-icon-size: min(10vh, 6vw); */
+  --pkm-icon-size: 35px;
   --pkm-icon-size-sm: min(15vh, 12vw);
   --pkm-icon-size-m: min(10vh, 12vw);
   --pkm-icon-size-l: min(12vh, 12vw);
