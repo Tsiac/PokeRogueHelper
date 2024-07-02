@@ -31,77 +31,80 @@ if (touchControlsElement) {
             // These values are when the ui is at move select or loading into battle
 			if(newValue === "MESSAGE" || newValue === "COMMAND" || newValue === "CONFIRM") {
 				
-				let data = LocalStorageUtils.getCurrentSessionData(localStorage)
+				let sessionData = LocalStorageUtils.getCurrentSessionData(localStorage)
 				
 				// Load JSON data
 				fetch(chrome.runtime.getURL('json/effectiveness_chart.json'))
 					.then(response => response.json())
 					.then(data => {
-						console.log('JSON Data:', data);
+						effectiveness = data;
 						// You can use the loaded data to update the overlay content
 						// overlay.innerText = JSON.stringify(data); // Example of displaying JSON data in overlay
+						console.log('JSON Data:', effectiveness);
+
+
+						createPokemonEffectivenessGrid(sessionData)
+
+
 					})
 					.catch(error => console.error('Error loading JSON:', error));
 
-				let imagesrc = chrome.runtime.getURL('sprites/items/poke-ball.png')
-                let evensrc = chrome.runtime.getURL('sprites/effective/even.svg')
-				
-				let pokemonGrid = 
-				`
-				<div class="pokemon-card" style="flex-direction: column;"> 
+				console.log('JSON Data:', effectiveness);
 
-					<div class="pokemon-icon" style="display: flex;">
-						<img src="${imagesrc}">
-					</div>
 
-					${data.party.map(
-						(pokemon) => {
-							return createPokemon(pokemon.species)
-						}
-					).join('')}
-
-				</div>
-				${Array(16).fill().map(
-					(x,i) => {
-						console.log(`sprites/types/${Types[i+1]}.png`)
-						return `
-							<div class="pokemon-card" style="flex-direction: column;">
-
-							<div class="type-icon" style="display: flex;">
-								<img src="${chrome.runtime.getURL(`sprites/types/${Types[i+1]}.png`)}">
-							</div>
-							
-							${data.party.map(
-								(pokemon) => {
-									return `
-									<div class="pokemon-icon" style="display: flex;">
-										<img src="${evensrc}">
-									</div>
-									`
-								}
-							).join('')}
-
-						</div>
-						`
-					})}
-				` 
-				const overlay = document.getElementById('transparent-overlay')
-				overlay.innerHTML = pokemonGrid
+				createPokemonEffectivenessGrid(sessionData)
 			} 
-            // Maybe later
-            else {
-				if (newValue === "SAVE_SLOT") {
-					//TODO: Perhaps observe changes in local storage?
-					setTimeout(LocalStorageUtils.cleanSessionData, 1000)
-				}
-				// HttpUtils.deleteWrapperDivs()
-			}
 		});
 	});
 
 	observer.observe(touchControlsElement, { attributes: true });
 }
 
+function createPokemonEffectivenessGrid(data)
+{
+	let imagesrc = chrome.runtime.getURL('sprites/items/poke-ball.png')
+	let evensrc = chrome.runtime.getURL('sprites/effective/even.svg')
+
+	return`
+	<div class="pokemon-card" style="flex-direction: column;"> 
+
+		<div class="pokemon-icon" style="display: flex;">
+			<img src="${imagesrc}">
+		</div>
+
+		${data.party.map(
+			(pokemon) => {
+				return createPokemon(pokemon.species)
+			}
+		).join('')}
+
+	</div>
+	${Array(16).fill().map(
+		(x,i) => {
+			return `
+				<div class="pokemon-card" style="flex-direction: column;">
+
+				<div class="type-icon" style="display: flex;">
+					<img src="${chrome.runtime.getURL(`sprites/types/${Types[i+1]}.png`)}">
+				</div>
+				
+				${data.party.map(
+					(pokemon) => {
+						return `
+						<div class="pokemon-icon" style="display: flex;">
+							<img src="${evensrc}">
+						</div>
+						`
+					}
+				).join('')}
+
+			</div>
+			`
+		})}
+	` 
+	const overlay = document.getElementById('transparent-overlay')
+	overlay.innerHTML = pokemonGrid
+}
 
 function createPokemon(pokemonid)
 {
