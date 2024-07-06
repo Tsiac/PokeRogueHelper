@@ -73,6 +73,8 @@ async function setupExtension()
 
     createPokemonEffectivenessGrid("party-effectiveness-grid");
     
+
+
     // Used to test updateElement system and reminder as to how to use it later. 
     //registerElement("party-effectiveness-grid", [State.MESSAGE, State.Command, State.Comfirm]); 
     //updateElement("party-effectiveness-grid", currentState); 
@@ -90,6 +92,7 @@ function mainLoop(newExternalState)
         if(newExternalState === State.Message || newExternalState === State.Command || newExternalState === State.Comfirm) {
             let sessionData = LocalStorageUtils.getCurrentSessionData(localStorage);
             console.log("sessiondata: ", sessionData);
+
             updatePokemonEffectivenessGrid("party-effectiveness-grid", sessionData); 
         } 
     
@@ -188,9 +191,34 @@ function getTypeNameByIndex(index) {
     return undefined; // Return undefined if no matching index is found
 }
 
+function createPokemonWeakList(id, xPos, yPos) {
+    let list = document.createElement('div'); 
+    list.id = id; 
+    list.className = 'pokemon-type-list'
+    list.style.display = 'flex'; 
+    list.style.left = xPos; 
+    list.style.top = yPos; 
 
-function createPokemonEffectivenessGrid(id) 
-{
+    for (let i = 0; i < 18; i++) {
+
+        let imgDiv = document.createElement('div'); 
+        imgDiv.id = `${id}-cell-${i}`; 
+        imgDiv.className = 'grid-cell'
+        //imgDiv.style.display = 'flex'; 
+
+        let img = document.createElement('img'); 
+        img.src = `${chrome.runtime.getURL(`sprites/types/${i}.png`)}`; 
+        img.alt = ''; 
+        imgDiv.appendChild(imgDiv);
+
+        list.appendChild(imgDiv); 
+    }
+
+    const overlay = document.getElementById('transparent-overlay');
+    overlay.appendChild(list);
+}
+
+function createPokemonEffectivenessGrid(id) {
     let gridIndex = 0; 
     let gridHTML = 
     `<div id="${id}" class="pokemon-effectiveness-grid">

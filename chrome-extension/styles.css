@@ -91,6 +91,13 @@
   padding: 5px;
 }
 
+.pokemon-type-list {
+  display: grid;
+  grid-template-columns: auto repeat(5, 1fr);
+  gap: 2px;
+  padding: 5px;
+}
+
 .grid-cell {
   width: 20px;  /* Change these PX values to change size of grid icon */
   height: 20px; /* TODO - make these scale with box size, then make box adjustable */
