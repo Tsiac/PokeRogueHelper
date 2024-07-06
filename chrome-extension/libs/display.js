@@ -72,6 +72,38 @@ function createOverlay() {
     // observer.observe(targetNode, config);
   }
 
+  function createUnderlay() {
+    const underlay = document.createElement('div');
+    underlay.id = 'transparent-underlay'; 
+    underlay.style.display = 'block'; // display: block; 
+    underlay.style.position = 'absolute'; // position: absolute; 
+    underlay.style.padding = '0px'; // padding: 0px; 
+
+    underlay.style.width = '1920px'; // width: 1920px; 
+    underlay.style.height = '1080px'; // height: 1080px; 
+
+    underlay.style.marginRight = '0px';
+    underlay.style.marginBottom = '0px';
+    underlay.style.overflow = 'hidden';
+    underlay.style.pointerEvents ='none';
+
+    underlay.style.transform = 'relative'; // transform: scale(0.427604, 0.427604); 
+    underlay.style.transformOrigin = 'left top';
+    underlay.style.zIndex = '9998';
+
+    underlay.style.color = 'white';
+    underlay.style.backgroundColor = 'rgba(0, 0, 0, 0)'; // Adjust transparency here
+
+    let app = document.getElementById('app').firstElementChild
+    app.appendChild(underlay);
+  }
+
+
+if (!document.getElementById('transparent-underlay')) {
+  createUnderlay();
+}
 if (!document.getElementById('transparent-overlay')) {
   createOverlay();
 }
+
+

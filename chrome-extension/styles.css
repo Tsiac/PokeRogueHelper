@@ -83,22 +83,28 @@
   flex-direction: column;
 }
 
-.pokemon-icon img {
-  width: var(--pkm-icon-size);
-  height: var(--pkm-icon-size);
-  padding: 2px;
+.pokemon-effectiveness-grid {
+  display: grid;
+  grid-template-columns: auto repeat(18, 1fr);
+  gap: 2px;
+  background-color: #333;
+  padding: 5px;
 }
 
-.pokemon-info {
-  margin-top: 10px;
+.grid-cell {
+  width: 20px;  /* Change these PX values to change size of grid icon */
+  height: 20px; /* TODO - make these scale with box size, then make box adjustable */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.type-icon img {
-  border-radius: 50%;
-  padding: 2px;
-  width: var(--pkm-icon-size);
-  height: var(--pkm-icon-size);
+.pokemon-icon img, .type-icon img, .effectiveness-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
+
 
 /* .pokemon-types {
   display: flex;
