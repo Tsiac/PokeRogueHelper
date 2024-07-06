@@ -99,10 +99,15 @@
   align-items: center;
 }
 
-.pokemon-icon img, .type-icon img, .effectiveness-icon img {
+.type-icon img, .effectiveness-icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.pokemon-icon img {
+  width: 35px;
+  height: 35px; 
 }
 
 
