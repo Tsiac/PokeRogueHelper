@@ -153,7 +153,7 @@ function getWeakTypes( types )
     const effectiveTypes = getDefensiveEffectiveness(types);
     let weakTypes = [];
     for(let type in effectiveTypes)
-        if(type > 1)
+        if(effectiveTypes[type] > 1)
             weakTypes.push( type );
         
     return weakTypes; 
@@ -199,22 +199,44 @@ function createPokemonWeakList(id, xPos, yPos) {
     list.style.left = xPos; 
     list.style.top = yPos; 
 
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < 7; i++) {
 
         let imgDiv = document.createElement('div'); 
         imgDiv.id = `${id}-cell-${i}`; 
         imgDiv.className = 'grid-cell'
-        //imgDiv.style.display = 'flex'; 
+        imgDiv.style.display = 'flex'; 
 
         let img = document.createElement('img'); 
         img.src = `${chrome.runtime.getURL(`sprites/types/${i}.png`)}`; 
         img.alt = ''; 
-        imgDiv.appendChild(imgDiv);
+
+        imgDiv.appendChild(img);
 
         list.appendChild(imgDiv); 
     }
 
-    const overlay = document.getElementById('transparent-overlay');
+    const overlay = document.getElementById('transparent-underlay');
+    overlay.appendChild(list);
+}
+
+function updatePokemonWeakList(id, pokemonTypeList) {
+    let list = document.getElementById(id); 
+
+    for (let i = 0; i < 7; i++) {
+        const imgElement = document.getElementById(`${id}-cell-${i}`); 
+        if(i < pokemonTypeList.length)
+        {
+            let type = pokemonTypeList[i].toLowerCase(); 
+            updateElementImg(imgElement, chrome.runtime.getURL(`sprites/types/${Types[type]}.png`), Types[type] ); 
+            imgElement.style.display = "flex"; 
+        }
+        else
+        {
+            imgElement.style.display = "none"; 
+        }
+    }
+
+    const overlay = document.getElementById('transparent-underlay');
     overlay.appendChild(list);
 }
 
