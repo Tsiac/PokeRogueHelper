@@ -5,7 +5,6 @@ let allPokemon;
 let defensiveEffectivenessChart;
 let offensiveEffectivenessChart;
 let elementRegistry = {};
-let roundCounterElement;
 
 // --------------------------------------------------------------------------- // 
 // ENUMS 
@@ -28,6 +27,8 @@ const State = {
 // --------------------------------------------------------------------------- // 
 // Runtime 
 // --------------------------------------------------------------------------- // 
+
+nextGymLevel = 0; // initalise nextGymLevel which is used in calculations in getUpcomingWaves()
 let currentState = State.Setup; 
 setupExtension();
  
@@ -98,6 +99,12 @@ function mainLoop(newExternalState)
             updateRoundCounter(sessionData);
         } 
     
+        // testing for round tracker
+        // console.log(getUpcomingWaves(20, { Trainer: "Ash" }));
+        // console.log(getUpcomingWaves(48, { Trainer: "Ash" }));
+        // console.log(getUpcomingWaves(50, { Trainer: "Ash" }));
+        // console.log(getUpcomingWaves(57, { Trainer: "Ash" }));
+
         for(var elementId in elementRegistry) 
             updateElement(elementId, newExternalState); 
 
@@ -362,7 +369,7 @@ function initializeRoundCounter(id) {
     roundCounterOverlay.className = 'transparent-overlay';
     document.body.appendChild(roundCounterOverlay);
 
-    roundCounterElement = document.createElement('div');
+    let roundCounterElement = document.createElement('div');
     roundCounterElement.className = 'pokerogue-round-counter';
     roundCounterElement.innerHTML = `
         <h3 class="round-counter-title">Wave: <span id="current-wave">0</span></h3>
@@ -371,9 +378,6 @@ function initializeRoundCounter(id) {
     
     // Add the round counter to its own overlay
     roundCounterOverlay.appendChild(roundCounterElement);
-
-    // initalise nextGymLevel which is used in calculations in getUpcomingWaves()
-    nextGymLevel = 0;
 }
 
 function updateRoundCounter(sessionData) {
@@ -392,7 +396,7 @@ function updateRoundCounter(sessionData) {
 
 function getUpcomingWaves(currentWave, sessionData) {
     const events = [
-        { waves: [20, 30, 40, 50, 60, 70, 80, 90 ,100, 110, 120, 130, 140, 150, 160, 170, 180], event: "Boss/Gym"},
+        { waves: [10, 20, 30, 40, 50, 60, 70, 80, 90 ,100, 110, 120, 130, 140, 150, 160, 170, 180], event: "Boss/Gym"},
         { waves: [8, 25, 55, 95, 145, 195], event: "Rival Battle" },
         { waves: [35, 62, 64, 66, 112, 114], event: "Evil Team Battle" },
         { waves: [115, 165], event: "Evil Team Boss Battle" },
