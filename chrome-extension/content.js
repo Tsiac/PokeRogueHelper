@@ -371,11 +371,14 @@ function initializeRoundCounter(id) {
     
     // Add the round counter to its own overlay
     roundCounterOverlay.appendChild(roundCounterElement);
+
+    // initalise nextGymLevel which is used in calculations in getUpcomingWaves()
+    nextGymLevel = 0;
 }
 
 function updateRoundCounter(sessionData) {
     let currentWave = sessionData.waveIndex;
-    let upcomingWaves = getUpcomingWaves(currentWave);
+    let upcomingWaves = getUpcomingWaves(currentWave, sessionData);
 
     document.getElementById('current-wave').textContent = currentWave;
     let upcomingList = document.getElementById('upcoming-waves');
@@ -387,9 +390,9 @@ function updateRoundCounter(sessionData) {
     });
 }
 
-function getUpcomingWaves(currentWave) {
+function getUpcomingWaves(currentWave, sessionData) {
     const events = [
-        { waves: [20, 30, 40, 50, 60, 70, 80, 90 ,100, 110, 120, 130, 140, 150, 160, 170, 180], event: "Boss/Gym"}, //TODO: add logic for gym battles which appear at either lvl 20 or 30 and then every 30 levels after that
+        { waves: [20, 30, 40, 50, 60, 70, 80, 90 ,100, 110, 120, 130, 140, 150, 160, 170, 180], event: "Boss/Gym"},
         { waves: [8, 25, 55, 95, 145, 195], event: "Rival Battle" },
         { waves: [35, 62, 64, 66, 112, 114], event: "Evil Team Battle" },
         { waves: [115, 165], event: "Evil Team Boss Battle" },
@@ -404,13 +407,35 @@ function getUpcomingWaves(currentWave) {
     events.forEach(eventType => {
         eventType.waves.forEach(wave => {
             if (wave > currentWave && wave <= currentWave + 10) {
-                upcomingWaves.push({ wave, event: eventType.event });
+
+                if (nextGymLevel == 0) {
+                    upcomingWaves.push({ wave, event: eventType.event });
+                }
+                else if (eventType.event == "Boss/Gym") {
+                    if (nextGymLevel == wave) {
+                        upcomingWaves.push({ wave, event: "Gym Battle" });
+                    }
+                    else {
+                        upcomingWaves.push({ wave, event: "Boss Pokemon Battle" });
+                    }
+                }
+                else {
+                    upcomingWaves.push({ wave, event: eventType.event });
+                }
             }
         });
     });
 
     // Sort the upcoming waves
     upcomingWaves.sort((a, b) => a.wave - b.wave);
+
+    if (currentWave % 10 === 0 && sessionData.Trainer != null && currentWave >= 20) {
+        nextGymLevel = currentWave + 30
+        Math.max(nextGymLevel,180)
+    }
+
+    console.log(sessionData.Trainer)
+    console.log(nextGymLevel)
 
     // Limit to 10 upcoming waves
     return upcomingWaves.slice(0, 10);
