@@ -5,6 +5,7 @@ let allPokemon;
 let defensiveEffectivenessChart;
 let offensiveEffectivenessChart;
 let elementRegistry = {};
+let roundCounterElement;
 
 // --------------------------------------------------------------------------- // 
 // ENUMS 
@@ -73,7 +74,7 @@ async function setupExtension()
 
     createPokemonEffectivenessGrid("party-effectiveness-grid");
     
-
+    initializeRoundCounter("round-counter-overlay");
 
     // Used to test updateElement system and reminder as to how to use it later. 
     //registerElement("party-effectiveness-grid", [State.MESSAGE, State.Command, State.Comfirm]); 
@@ -93,7 +94,8 @@ function mainLoop(newExternalState)
             let sessionData = LocalStorageUtils.getCurrentSessionData(localStorage);
             console.log("sessiondata: ", sessionData);
 
-            updatePokemonEffectivenessGrid("party-effectiveness-grid", sessionData); 
+            updatePokemonEffectivenessGrid("party-effectiveness-grid", sessionData);
+            updateRoundCounter(sessionData);
         } 
     
         for(var elementId in elementRegistry) 
@@ -210,7 +212,7 @@ function createPokemonWeakList(id, xPos, yPos) {
         img.src = `${chrome.runtime.getURL(`sprites/types/${i}.png`)}`; 
         img.alt = ''; 
 
-        imgDiv.appendChild(img);
+        imgDiv.appendChild(img);ta
 
         list.appendChild(imgDiv); 
     }
@@ -349,4 +351,67 @@ function createPokemon(pokemonid)
   `
 
   return cardHTML;
+}
+
+//functions for round counter
+
+function initializeRoundCounter(id) {
+    //TODO: Make this drag around like the other overlay
+    const roundCounterOverlay = document.createElement('div');
+    roundCounterOverlay.id = id;
+    roundCounterOverlay.className = 'transparent-overlay';
+    document.body.appendChild(roundCounterOverlay);
+
+    roundCounterElement = document.createElement('div');
+    roundCounterElement.className = 'pokerogue-round-counter';
+    roundCounterElement.innerHTML = `
+        <h3 class="round-counter-title">Wave: <span id="current-wave">0</span></h3>
+        <ul id="upcoming-waves" class="upcoming-waves"></ul>
+    `;
+    
+    // Add the round counter to its own overlay
+    roundCounterOverlay.appendChild(roundCounterElement);
+}
+
+function updateRoundCounter(sessionData) {
+    let currentWave = sessionData.waveIndex;
+    let upcomingWaves = getUpcomingWaves(currentWave);
+
+    document.getElementById('current-wave').textContent = currentWave;
+    let upcomingList = document.getElementById('upcoming-waves');
+    upcomingList.innerHTML = '';
+    upcomingWaves.forEach((wave) => {
+        let li = document.createElement('li');
+        li.textContent = `Wave ${wave.wave}: ${wave.event}`;
+        upcomingList.appendChild(li);
+    });
+}
+
+function getUpcomingWaves(currentWave) {
+    const events = [
+        { waves: [20, 30, 40, 50, 60, 70, 80, 90 ,100, 110, 120, 130, 140, 150, 160, 170, 180], event: "Boss/Gym"}, //TODO: add logic for gym battles which appear at either lvl 20 or 30 and then every 30 levels after that
+        { waves: [8, 25, 55, 95, 145, 195], event: "Rival Battle" },
+        { waves: [35, 62, 64, 66, 112, 114], event: "Evil Team Battle" },
+        { waves: [115, 165], event: "Evil Team Boss Battle" },
+        { waves: [182, 184, 186, 188], event: "Elite 4 Battle" },
+        { waves: [190], event: "Champion Battle" },
+        { waves: [200], event: "Eternus Battle" }
+    ];
+
+    let upcomingWaves = [];
+
+    // Check for specific events
+    events.forEach(eventType => {
+        eventType.waves.forEach(wave => {
+            if (wave > currentWave && wave <= currentWave + 10) {
+                upcomingWaves.push({ wave, event: eventType.event });
+            }
+        });
+    });
+
+    // Sort the upcoming waves
+    upcomingWaves.sort((a, b) => a.wave - b.wave);
+
+    // Limit to 10 upcoming waves
+    return upcomingWaves.slice(0, 10);
 }

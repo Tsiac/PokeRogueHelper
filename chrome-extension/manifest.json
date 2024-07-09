@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "name": "Transparent Overlay",
-    "version": "1.0",
-    "description": "Displays a transparent, movable overlay on pokerogue.net",
+    "version": "1.1",
+    "description": "Displays a transparent, movable overlay and round counter on pokerogue.net",
     "permissions": [
       "activeTab",
       "storage",
