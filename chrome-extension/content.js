@@ -362,29 +362,28 @@ function createPokemon(pokemonid)
 
 //functions for round counter
 
-function initializeRoundCounter(id) {
-    //TODO: Make this drag around like the other overlay
-    const roundCounterOverlay = document.createElement('div');
-    roundCounterOverlay.id = id;
-    roundCounterOverlay.className = 'transparent-overlay';
-    document.body.appendChild(roundCounterOverlay);
 
-    let roundCounterElement = document.createElement('div');
-    roundCounterElement.className = 'pokerogue-round-counter';
-    roundCounterElement.innerHTML = `
-        <h3 class="round-counter-title">Wave: <span id="current-wave">0</span></h3>
+
+function initializeRoundCounter(id) {
+    let counterHTML = `
+    <div id="${id}" class="round-tracker">
+        <h3 class="round-counter-title">
         <ul id="upcoming-waves" class="upcoming-waves"></ul>
+    </div>
     `;
-    
-    // Add the round counter to its own overlay
-    roundCounterOverlay.appendChild(roundCounterElement);
+
+    const overlay = document.getElementById('round-tracker');
+    if (overlay) {
+        // Append the round counter HTML to the existing overlay
+        overlay.innerHTML += counterHTML;
+    }
 }
 
 function updateRoundCounter(sessionData) {
     let currentWave = sessionData.waveIndex;
     let upcomingWaves = getUpcomingWaves(currentWave, sessionData);
 
-    document.getElementById('current-wave').textContent = currentWave;
+    document.getElementById('current-wave').textContent = 'Current Wave - ' + currentWave;
     let upcomingList = document.getElementById('upcoming-waves');
     upcomingList.innerHTML = '';
     upcomingWaves.forEach((wave) => {

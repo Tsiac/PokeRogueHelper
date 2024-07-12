@@ -98,12 +98,69 @@ function createOverlay() {
     app.appendChild(underlay);
   }
 
+  function createRoundTracker() {
+    const roundTracker = document.createElement('div');
+    roundTracker.id = 'round-tracker';
+    roundTracker.style.position = 'fixed';
+    roundTracker.style.padding = '5px';
+    roundTracker.style.width = '200px';
+
+    roundTracker.style.top = '50px';
+    roundTracker.style.left = '50px';
+
+    roundTracker.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    roundTracker.style.zIndex = '9999';
+    roundTracker.style.cursor = 'move';
+
+    roundTracker.style.display = 'flex';
+    roundTracker.style.flexDirection = 'column';
+    roundTracker.style.justifyContent = 'center';
+    roundTracker.style.alignItems = 'center';
+    roundTracker.style.color = 'white';
+    roundTracker.style.fontSize = '16px';
+    roundTracker.style.textAlign = 'center';
+    // roundTracker.innerText = 'This is a movable overlay';
+
+    roundTracker.style.borderRadius = '5px';
+    roundTracker.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+
+    roundTracker.innerHTML = `
+      <h3 id="current-wave" style="margin-top: 0; margin-bottom: 10px;">Round Counter</h3>
+      <ul id="upcoming-waves" style="list-style-type: none; padding: 0; margin: 0;font-weight: bold;"></ul>
+    `;
+  
+    document.body.appendChild(roundTracker);
+  
+    // Make the round tracker draggable
+    let isDragging = false;
+    let offsetX, offsetY;
+  
+    roundTracker.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - roundTracker.offsetLeft;
+      offsetY = e.clientY - roundTracker.offsetTop;
+    });
+  
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        roundTracker.style.left = `${e.clientX - offsetX}px`;
+        roundTracker.style.top = `${e.clientY - offsetY}px`;
+      }
+    });
+  
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+  }
 
 if (!document.getElementById('transparent-underlay')) {
   createUnderlay();
 }
 if (!document.getElementById('transparent-overlay')) {
   createOverlay();
+}
+if (!document.getElementById('round-tracker')) {
+  createRoundTracker();
 }
 
 
