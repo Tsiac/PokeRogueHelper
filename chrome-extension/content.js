@@ -28,7 +28,7 @@ const State = {
 // Runtime 
 // --------------------------------------------------------------------------- // 
 
-nextGymLevel = 0; // initalise nextGymLevel which is used in calculations in getUpcomingWaves()
+let nextGymLevel = 0; // initalise nextGymLevel which is used in calculations in getUpcomingWaves()
 let currentState = State.Setup; 
 setupExtension();
  
@@ -410,19 +410,13 @@ function getUpcomingWaves(currentWave, sessionData) {
     events.forEach(eventType => {
         eventType.waves.forEach(wave => {
             if (wave > currentWave && wave <= currentWave + 10) {
-
-                if (nextGymLevel == 0) {
-                    upcomingWaves.push({ wave, event: eventType.event });
-                }
-                else if (eventType.event == "Boss/Gym") {
-                    if (nextGymLevel == wave) {
+                if (eventType.event === "Boss/Gym" && nextGymLevel !== 0 ) {
+                    if (nextGymLevel === wave) {
                         upcomingWaves.push({ wave, event: "Gym Battle" });
-                    }
-                    else {
+                    } else {
                         upcomingWaves.push({ wave, event: "Boss Pokemon Battle" });
                     }
-                }
-                else {
+                } else {
                     upcomingWaves.push({ wave, event: eventType.event });
                 }
             }
@@ -432,13 +426,12 @@ function getUpcomingWaves(currentWave, sessionData) {
     // Sort the upcoming waves
     upcomingWaves.sort((a, b) => a.wave - b.wave);
 
-    if (currentWave % 10 === 0 && sessionData.Trainer != null && currentWave >= 20) {
-        nextGymLevel = currentWave + 30
-        Math.max(nextGymLevel,180)
+    if (currentWave % 10 === 0 && sessionData.trainer != null) {
+        nextGymLevel = Math.min(currentWave + 30, 180);
     }
 
-    console.log(sessionData.Trainer)
-    console.log(nextGymLevel)
+    console.log('Trainer ID: ' + sessionData.trainer)
+    console.log('Next Gym Level: ' + nextGymLevel)
 
     // Limit to 10 upcoming waves
     return upcomingWaves.slice(0, 10);
