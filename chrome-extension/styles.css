@@ -117,6 +117,15 @@
   height: 35px; 
 }
 
+.grid-cell.toggle-icon {
+  cursor: pointer;
+}
+
+.grid-cell.toggle-icon img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain;
+}
 
 /* .pokemon-types {
   display: flex;
@@ -265,9 +274,12 @@ input {
   padding: 10px;
   border-radius: 5px;
   font-family: Arial, sans-serif;
+  font-size: var(--font-size);
   z-index: 9999;
   cursor: move;
   user-select: none;
+  transition: left 0.1s, top 0.1s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .round-counter-title {

@@ -95,16 +95,13 @@ function mainLoop(newExternalState)
             let sessionData = LocalStorageUtils.getCurrentSessionData(localStorage);
             console.log("sessiondata: ", sessionData);
 
-            updatePokemonEffectivenessGrid("party-effectiveness-grid", sessionData);
+            const toggleIcon = document.getElementById('party-effectiveness-grid-cell-0').querySelector('img');
+            const isOffensive = toggleIcon.alt === "Offensive";
+
+            updatePokemonEffectivenessGrid("party-effectiveness-grid", sessionData, isOffensive);
             updateRoundCounter(sessionData);
         } 
     
-        // testing for round tracker
-        // console.log(getUpcomingWaves(20, { Trainer: "Ash" }));
-        // console.log(getUpcomingWaves(48, { Trainer: "Ash" }));
-        // console.log(getUpcomingWaves(50, { Trainer: "Ash" }));
-        // console.log(getUpcomingWaves(57, { Trainer: "Ash" }));
-
         for(var elementId in elementRegistry) 
             updateElement(elementId, newExternalState); 
 
@@ -155,6 +152,22 @@ function getDefensiveEffectiveness(types) {
     }
 
     return multiplied
+}
+
+function getOffensiveEffectiveness(types) {
+    let effectiveness = {};
+    for (let type in Types) {
+        effectiveness[capitalize(type)] = 1;
+    }
+    
+    types.forEach(type => {
+        for (let defenderType in offensiveEffectivenessChart[type]) {
+            let multiplier = offensiveEffectivenessChart[type][defenderType];
+            effectiveness[defenderType] *= multiplier;
+        }
+    });
+    
+    return effectiveness;
 }
 
 function getWeakTypes( types )
@@ -253,7 +266,9 @@ function createPokemonEffectivenessGrid(id) {
     let gridIndex = 0; 
     let gridHTML = 
     `<div id="${id}" class="pokemon-effectiveness-grid">
-        <div id="${id}-cell-${gridIndex}" class="grid-cell"></div>`
+        <div id="${id}-cell-${gridIndex}" class="grid-cell toggle-icon">
+            <img src="${chrome.runtime.getURL('sprites/toggleicons/defensive.png')}" alt="Defensive">
+        </div>`
     gridIndex++; 
 
     for (let i = 1; i <= 18; i++) 
@@ -286,6 +301,22 @@ function createPokemonEffectivenessGrid(id) {
 
     const overlay = document.getElementById('transparent-overlay');
     overlay.innerHTML = gridHTML;
+
+    const toggleIcon = document.getElementById(`${id}-cell-0`);
+    toggleIcon.addEventListener('click', () => toggleEffectivenessGrid(id));
+
+}
+
+function toggleEffectivenessGrid(id) {
+    const toggleIcon = document.getElementById(`${id}-cell-0`).querySelector('img');
+    const isCurrentlyOffensive = toggleIcon.alt === "Offensive";
+    
+    toggleIcon.src = chrome.runtime.getURL(`sprites/toggleicons/${isCurrentlyOffensive ? 'defensive' : 'offensive'}.png`);
+    toggleIcon.alt = isCurrentlyOffensive ? "Defensive" : "Offensive";
+
+    // Re-render the grid with the new mode
+    let sessionData = LocalStorageUtils.getCurrentSessionData(localStorage);
+    updatePokemonEffectivenessGrid(id, sessionData, !isCurrentlyOffensive);
 }
 
 function updateElementImg(element, newSrc, newAlt)
@@ -294,20 +325,23 @@ function updateElementImg(element, newSrc, newAlt)
     element.getElementsByTagName("img")[0].alt = newAlt; 
 }
 
-function updatePokemonEffectivenessGrid(id, data) {
-    
+function updatePokemonEffectivenessGrid(id, data, isOffensive) {
     let sortedPokemon = data.party.map((pokemon) => pokemon.species).sort();
     
     // For each pokemon
     for (let i = 0; i < 6; i++) {
-
         let startingIndex = 19*(i+1); 
         if(i < sortedPokemon.length) {
-            
             const pokemonId = sortedPokemon[i]; 
             const pokemonTypes = findPokemonType(pokemonId);
-            const effectiveTypes = getDefensiveEffectiveness(pokemonTypes);
 
+            let effectiveTypes;
+            if (isOffensive) {
+                effectiveTypes = getOffensiveEffectiveness(pokemonTypes);
+            } else {
+                effectiveTypes = getDefensiveEffectiveness(pokemonTypes);
+            }
+            
             let pokemonIcon = document.getElementById( `${id}-cell-${startingIndex}` );
             updateElementImg(pokemonIcon, `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`, `Pokemon ${pokemonId}`); 
             pokemonIcon.style.display = "flex";
@@ -318,27 +352,37 @@ function updatePokemonEffectivenessGrid(id, data) {
                 const effectiveness = effectiveTypes[capitalize(typeName)];
 
                 let effectivenessSrc;
-                if (effectiveness === 4) {
-                    effectivenessSrc = chrome.runtime.getURL('sprites/effective/super-minus.png');
-                } else if (effectiveness === 2) {
-                    effectivenessSrc = chrome.runtime.getURL('sprites/effective/minus.png');
-                } else if (effectiveness === 0.5) {
-                    effectivenessSrc = chrome.runtime.getURL('sprites/effective/plus.png');
-                } else if (effectiveness === 0.25) {
-                    effectivenessSrc = chrome.runtime.getURL('sprites/effective/super-plus.png');
-                } else if (effectiveness === 0) {
-                    effectivenessSrc = chrome.runtime.getURL('sprites/effective/none.png');
+                if (isOffensive) {
+                    if (effectiveness === 2) {
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/super-plus.png');
+                    } else if (effectiveness === 0.5) {
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/minus.png');
+                    } else if (effectiveness === 0) {
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/none.png');
+                    } else {
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/even.png');
+                    }
                 } else {
-                    effectivenessSrc = chrome.runtime.getURL('sprites/effective/even.png');
+                    if (effectiveness === 4) {
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/super-minus.png');
+                    } else if (effectiveness === 2) {
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/minus.png');
+                    } else if (effectiveness === 0.5) {
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/plus.png');
+                    } else if (effectiveness === 0.25) {
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/super-plus.png');
+                    } else if (effectiveness === 0) {
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/none.png');
+                    } else {
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/even.png');
+                    }
                 }
 
                 let effectivenessCell = document.getElementById( `${id}-cell-${startingIndex+j}` );
                 updateElementImg(effectivenessCell, effectivenessSrc, `${effectiveness}x effective`); 
                 effectivenessCell.style.display = "flex";
             }
-        }
-        else 
-        {
+        } else {
             for (let j = 0; j <= 18; j++) {
                 let element = document.getElementById( `${id}-cell-${startingIndex+j}` );
                 element.style.display = "none";
@@ -361,8 +405,6 @@ function createPokemon(pokemonid)
 }
 
 //functions for round counter
-
-
 
 function initializeRoundCounter(id) {
     let counterHTML = `
