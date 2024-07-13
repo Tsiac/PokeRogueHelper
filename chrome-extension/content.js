@@ -354,7 +354,7 @@ function updatePokemonEffectivenessGrid(id, data, isOffensive) {
                 let effectivenessSrc;
                 if (isOffensive) {
                     if (effectiveness === 2) {
-                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/super-plus.png');
+                        effectivenessSrc = chrome.runtime.getURL('sprites/effective/plus.png');
                     } else if (effectiveness === 0.5) {
                         effectivenessSrc = chrome.runtime.getURL('sprites/effective/minus.png');
                     } else if (effectiveness === 0) {
