@@ -1,0 +1,6436 @@
+[
+    {
+      "id": 1,
+      "name": "Pound",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 2,
+      "name": "Karate Chop",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 3,
+      "name": "Double Slap",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 15
+    },
+    {
+      "id": 4,
+      "name": "Comet Punch",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 18
+    },
+    {
+      "id": 5,
+      "name": "Mega Punch",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 6,
+      "name": "Pay Day",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 7,
+      "name": "Fire Punch",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 8,
+      "name": "Ice Punch",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 9,
+      "name": "Thunder Punch",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 10,
+      "name": "Scratch",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 11,
+      "name": "Vise Grip",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 55
+    },
+    {
+      "id": 12,
+      "name": "Guillotine",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 13,
+      "name": "Razor Wind",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 14,
+      "name": "Swords Dance",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 15,
+      "name": "Cut",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 16,
+      "name": "Gust",
+      "type": "Flying",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 17,
+      "name": "Wing Attack",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 18,
+      "name": "Whirlwind",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 19,
+      "name": "Fly",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 20,
+      "name": "Bind",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 15
+    },
+    {
+      "id": 21,
+      "name": "Slam",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 22,
+      "name": "Vine Whip",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 45
+    },
+    {
+      "id": 23,
+      "name": "Stomp",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 24,
+      "name": "Double Kick",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 30
+    },
+    {
+      "id": 25,
+      "name": "Mega Kick",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 26,
+      "name": "Jump Kick",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 27,
+      "name": "Rolling Kick",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 28,
+      "name": "Sand Attack",
+      "type": "Ground",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 29,
+      "name": "Headbutt",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 30,
+      "name": "Horn Attack",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 31,
+      "name": "Fury Attack",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 15
+    },
+    {
+      "id": 32,
+      "name": "Horn Drill",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 33,
+      "name": "Tackle",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 34,
+      "name": "Body Slam",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 35,
+      "name": "Wrap",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 15
+    },
+    {
+      "id": 36,
+      "name": "Take Down",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 37,
+      "name": "Thrash",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 38,
+      "name": "Double-Edge",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 39,
+      "name": "Tail Whip",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 40,
+      "name": "Poison Sting",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 15
+    },
+    {
+      "id": 41,
+      "name": "Twineedle",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 25
+    },
+    {
+      "id": 42,
+      "name": "Pin Missile",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 25
+    },
+    {
+      "id": 43,
+      "name": "Leer",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 44,
+      "name": "Bite",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 45,
+      "name": "Growl",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 46,
+      "name": "Roar",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 47,
+      "name": "Sing",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 48,
+      "name": "Supersonic",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 49,
+      "name": "Sonic Boom",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 50,
+      "name": "Disable",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 51,
+      "name": "Acid",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 52,
+      "name": "Ember",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 53,
+      "name": "Flamethrower",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 54,
+      "name": "Mist",
+      "type": "Ice",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 55,
+      "name": "Water Gun",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 56,
+      "name": "Hydro Pump",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 110
+    },
+    {
+      "id": 57,
+      "name": "Surf",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 58,
+      "name": "Ice Beam",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 59,
+      "name": "Blizzard",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": 110
+    },
+    {
+      "id": 60,
+      "name": "Psybeam",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 61,
+      "name": "Bubble Beam",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 62,
+      "name": "Aurora Beam",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 63,
+      "name": "Hyper Beam",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 64,
+      "name": "Peck",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 35
+    },
+    {
+      "id": 65,
+      "name": "Drill Peck",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 66,
+      "name": "Submission",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 67,
+      "name": "Low Kick",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 68,
+      "name": "Counter",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 69,
+      "name": "Seismic Toss",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 70,
+      "name": "Strength",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 71,
+      "name": "Absorb",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 20
+    },
+    {
+      "id": 72,
+      "name": "Mega Drain",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 73,
+      "name": "Leech Seed",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 74,
+      "name": "Growth",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 75,
+      "name": "Razor Leaf",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 55
+    },
+    {
+      "id": 76,
+      "name": "Solar Beam",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 77,
+      "name": "Poison Powder",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 78,
+      "name": "Stun Spore",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 79,
+      "name": "Sleep Powder",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 80,
+      "name": "Petal Dance",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 81,
+      "name": "String Shot",
+      "type": "Bug",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 82,
+      "name": "Dragon Rage",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 83,
+      "name": "Fire Spin",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 35
+    },
+    {
+      "id": 84,
+      "name": "Thunder Shock",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 85,
+      "name": "Thunderbolt",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 86,
+      "name": "Thunder Wave",
+      "type": "Electric",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 87,
+      "name": "Thunder",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 110
+    },
+    {
+      "id": 88,
+      "name": "Rock Throw",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 89,
+      "name": "Earthquake",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 90,
+      "name": "Fissure",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 91,
+      "name": "Dig",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 92,
+      "name": "Toxic",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 93,
+      "name": "Confusion",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 50
+    },
+    {
+      "id": 94,
+      "name": "Psychic",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 95,
+      "name": "Hypnosis",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 96,
+      "name": "Meditate",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 97,
+      "name": "Agility",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 98,
+      "name": "Quick Attack",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 99,
+      "name": "Rage",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 20
+    },
+    {
+      "id": 100,
+      "name": "Teleport",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 101,
+      "name": "Night Shade",
+      "type": "Ghost",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 102,
+      "name": "Mimic",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 103,
+      "name": "Screech",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 104,
+      "name": "Double Team",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 105,
+      "name": "Recover",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 106,
+      "name": "Harden",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 107,
+      "name": "Minimize",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 108,
+      "name": "Smokescreen",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 109,
+      "name": "Confuse Ray",
+      "type": "Ghost",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 110,
+      "name": "Withdraw",
+      "type": "Water",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 111,
+      "name": "Defense Curl",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 112,
+      "name": "Barrier",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 113,
+      "name": "Light Screen",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 114,
+      "name": "Haze",
+      "type": "Ice",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 115,
+      "name": "Reflect",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 116,
+      "name": "Focus Energy",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 117,
+      "name": "Bide",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 118,
+      "name": "Metronome",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 119,
+      "name": "Mirror Move",
+      "type": "Flying",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 120,
+      "name": "Self-Destruct",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 200
+    },
+    {
+      "id": 121,
+      "name": "Egg Bomb",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 122,
+      "name": "Lick",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 30
+    },
+    {
+      "id": 123,
+      "name": "Smog",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 30
+    },
+    {
+      "id": 124,
+      "name": "Sludge",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 125,
+      "name": "Bone Club",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 126,
+      "name": "Fire Blast",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 110
+    },
+    {
+      "id": 127,
+      "name": "Waterfall",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 128,
+      "name": "Clamp",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 35
+    },
+    {
+      "id": 129,
+      "name": "Swift",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 130,
+      "name": "Skull Bash",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 130
+    },
+    {
+      "id": 131,
+      "name": "Spike Cannon",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 20
+    },
+    {
+      "id": 132,
+      "name": "Constrict",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 133,
+      "name": "Amnesia",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 134,
+      "name": "Kinesis",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 135,
+      "name": "Soft-Boiled",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 136,
+      "name": "High Jump Kick",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 130
+    },
+    {
+      "id": 137,
+      "name": "Glare",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 138,
+      "name": "Dream Eater",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 139,
+      "name": "Poison Gas",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 140,
+      "name": "Barrage",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 15
+    },
+    {
+      "id": 141,
+      "name": "Leech Life",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 142,
+      "name": "Lovely Kiss",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 143,
+      "name": "Sky Attack",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 140
+    },
+    {
+      "id": 144,
+      "name": "Transform",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 145,
+      "name": "Bubble",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 146,
+      "name": "Dizzy Punch",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 147,
+      "name": "Spore",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 148,
+      "name": "Flash",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 149,
+      "name": "Psywave",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 150,
+      "name": "Splash",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 151,
+      "name": "Acid Armor",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 152,
+      "name": "Crabhammer",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 153,
+      "name": "Explosion",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 250
+    },
+    {
+      "id": 154,
+      "name": "Fury Swipes",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 18
+    },
+    {
+      "id": 155,
+      "name": "Bonemerang",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 156,
+      "name": "Rest",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 157,
+      "name": "Rock Slide",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 158,
+      "name": "Hyper Fang",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 159,
+      "name": "Sharpen",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 160,
+      "name": "Conversion",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 161,
+      "name": "Tri Attack",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 162,
+      "name": "Super Fang",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 163,
+      "name": "Slash",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 164,
+      "name": "Substitute",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 165,
+      "name": "Struggle",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 166,
+      "name": "Sketch",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 167,
+      "name": "Triple Kick",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 168,
+      "name": "Thief",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 169,
+      "name": "Spider Web",
+      "type": "Bug",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 170,
+      "name": "Mind Reader",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 171,
+      "name": "Nightmare",
+      "type": "Ghost",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 172,
+      "name": "Flame Wheel",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 173,
+      "name": "Snore",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 50
+    },
+    {
+      "id": 174,
+      "name": "Curse",
+      "type": "Ghost",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 175,
+      "name": "Flail",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 176,
+      "name": "Conversion 2",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 177,
+      "name": "Aeroblast",
+      "type": "Flying",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 178,
+      "name": "Cotton Spore",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 179,
+      "name": "Reversal",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 180,
+      "name": "Spite",
+      "type": "Ghost",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 181,
+      "name": "Powder Snow",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 182,
+      "name": "Protect",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 183,
+      "name": "Mach Punch",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 184,
+      "name": "Scary Face",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 185,
+      "name": "Feint Attack",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 186,
+      "name": "Sweet Kiss",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 187,
+      "name": "Belly Drum",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 188,
+      "name": "Sludge Bomb",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 189,
+      "name": "Mud-Slap",
+      "type": "Ground",
+      "damage_class": "Special",
+      "power": 20
+    },
+    {
+      "id": 190,
+      "name": "Octazooka",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 191,
+      "name": "Spikes",
+      "type": "Ground",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 192,
+      "name": "Zap Cannon",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 193,
+      "name": "Foresight",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 194,
+      "name": "Destiny Bond",
+      "type": "Ghost",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 195,
+      "name": "Perish Song",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 196,
+      "name": "Icy Wind",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": 55
+    },
+    {
+      "id": 197,
+      "name": "Detect",
+      "type": "Fighting",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 198,
+      "name": "Bone Rush",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 25
+    },
+    {
+      "id": 199,
+      "name": "Lock-On",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 200,
+      "name": "Outrage",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 201,
+      "name": "Sandstorm",
+      "type": "Rock",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 202,
+      "name": "Giga Drain",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 75
+    },
+    {
+      "id": 203,
+      "name": "Endure",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 204,
+      "name": "Charm",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 205,
+      "name": "Rollout",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 30
+    },
+    {
+      "id": 206,
+      "name": "False Swipe",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 207,
+      "name": "Swagger",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 208,
+      "name": "Milk Drink",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 209,
+      "name": "Spark",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 210,
+      "name": "Fury Cutter",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 211,
+      "name": "Steel Wing",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 212,
+      "name": "Mean Look",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 213,
+      "name": "Attract",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 214,
+      "name": "Sleep Talk",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 215,
+      "name": "Heal Bell",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 216,
+      "name": "Return",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 217,
+      "name": "Present",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 218,
+      "name": "Frustration",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 219,
+      "name": "Safeguard",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 220,
+      "name": "Pain Split",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 221,
+      "name": "Sacred Fire",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 222,
+      "name": "Magnitude",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 223,
+      "name": "Dynamic Punch",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 224,
+      "name": "Megahorn",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 225,
+      "name": "Dragon Breath",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 226,
+      "name": "Baton Pass",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 227,
+      "name": "Encore",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 228,
+      "name": "Pursuit",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 229,
+      "name": "Rapid Spin",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 230,
+      "name": "Sweet Scent",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 231,
+      "name": "Iron Tail",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 232,
+      "name": "Metal Claw",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 233,
+      "name": "Vital Throw",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 234,
+      "name": "Morning Sun",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 235,
+      "name": "Synthesis",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 236,
+      "name": "Moonlight",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 237,
+      "name": "Hidden Power",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 238,
+      "name": "Cross Chop",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 239,
+      "name": "Twister",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 240,
+      "name": "Rain Dance",
+      "type": "Water",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 241,
+      "name": "Sunny Day",
+      "type": "Fire",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 242,
+      "name": "Crunch",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 243,
+      "name": "Mirror Coat",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 244,
+      "name": "Psych Up",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 245,
+      "name": "Extreme Speed",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 246,
+      "name": "Ancient Power",
+      "type": "Rock",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 247,
+      "name": "Shadow Ball",
+      "type": "Ghost",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 248,
+      "name": "Future Sight",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 249,
+      "name": "Rock Smash",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 250,
+      "name": "Whirlpool",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 35
+    },
+    {
+      "id": 251,
+      "name": "Beat Up",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 252,
+      "name": "Fake Out",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 253,
+      "name": "Uproar",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 254,
+      "name": "Stockpile",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 255,
+      "name": "Spit Up",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 256,
+      "name": "Swallow",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 257,
+      "name": "Heat Wave",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 95
+    },
+    {
+      "id": 258,
+      "name": "Hail",
+      "type": "Ice",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 259,
+      "name": "Torment",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 260,
+      "name": "Flatter",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 261,
+      "name": "Will-O-Wisp",
+      "type": "Fire",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 262,
+      "name": "Memento",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 263,
+      "name": "Facade",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 264,
+      "name": "Focus Punch",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 150
+    },
+    {
+      "id": 265,
+      "name": "Smelling Salts",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 266,
+      "name": "Follow Me",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 267,
+      "name": "Nature Power",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 268,
+      "name": "Charge",
+      "type": "Electric",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 269,
+      "name": "Taunt",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 270,
+      "name": "Helping Hand",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 271,
+      "name": "Trick",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 272,
+      "name": "Role Play",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 273,
+      "name": "Wish",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 274,
+      "name": "Assist",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 275,
+      "name": "Ingrain",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 276,
+      "name": "Superpower",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 277,
+      "name": "Magic Coat",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 278,
+      "name": "Recycle",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 279,
+      "name": "Revenge",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 280,
+      "name": "Brick Break",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 281,
+      "name": "Yawn",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 282,
+      "name": "Knock Off",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 283,
+      "name": "Endeavor",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 284,
+      "name": "Eruption",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 285,
+      "name": "Skill Swap",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 286,
+      "name": "Imprison",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 287,
+      "name": "Refresh",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 288,
+      "name": "Grudge",
+      "type": "Ghost",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 289,
+      "name": "Snatch",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 290,
+      "name": "Secret Power",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 291,
+      "name": "Dive",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 292,
+      "name": "Arm Thrust",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 15
+    },
+    {
+      "id": 293,
+      "name": "Camouflage",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 294,
+      "name": "Tail Glow",
+      "type": "Bug",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 295,
+      "name": "Luster Purge",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 95
+    },
+    {
+      "id": 296,
+      "name": "Mist Ball",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 95
+    },
+    {
+      "id": 297,
+      "name": "Feather Dance",
+      "type": "Flying",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 298,
+      "name": "Teeter Dance",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 299,
+      "name": "Blaze Kick",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 300,
+      "name": "Mud Sport",
+      "type": "Ground",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 301,
+      "name": "Ice Ball",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 30
+    },
+    {
+      "id": 302,
+      "name": "Needle Arm",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 303,
+      "name": "Slack Off",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 304,
+      "name": "Hyper Voice",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 305,
+      "name": "Poison Fang",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 306,
+      "name": "Crush Claw",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 307,
+      "name": "Blast Burn",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 308,
+      "name": "Hydro Cannon",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 309,
+      "name": "Meteor Mash",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 310,
+      "name": "Astonish",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 30
+    },
+    {
+      "id": 311,
+      "name": "Weather Ball",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 50
+    },
+    {
+      "id": 312,
+      "name": "Aromatherapy",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 313,
+      "name": "Fake Tears",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 314,
+      "name": "Air Cutter",
+      "type": "Flying",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 315,
+      "name": "Overheat",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 130
+    },
+    {
+      "id": 316,
+      "name": "Odor Sleuth",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 317,
+      "name": "Rock Tomb",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 318,
+      "name": "Silver Wind",
+      "type": "Bug",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 319,
+      "name": "Metal Sound",
+      "type": "Steel",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 320,
+      "name": "Grass Whistle",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 321,
+      "name": "Tickle",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 322,
+      "name": "Cosmic Power",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 323,
+      "name": "Water Spout",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 324,
+      "name": "Signal Beam",
+      "type": "Bug",
+      "damage_class": "Special",
+      "power": 75
+    },
+    {
+      "id": 325,
+      "name": "Shadow Punch",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 326,
+      "name": "Extrasensory",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 327,
+      "name": "Sky Uppercut",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 328,
+      "name": "Sand Tomb",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 35
+    },
+    {
+      "id": 329,
+      "name": "Sheer Cold",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 330,
+      "name": "Muddy Water",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 331,
+      "name": "Bullet Seed",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 25
+    },
+    {
+      "id": 332,
+      "name": "Aerial Ace",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 333,
+      "name": "Icicle Spear",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 25
+    },
+    {
+      "id": 334,
+      "name": "Iron Defense",
+      "type": "Steel",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 335,
+      "name": "Block",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 336,
+      "name": "Howl",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 337,
+      "name": "Dragon Claw",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 338,
+      "name": "Frenzy Plant",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 339,
+      "name": "Bulk Up",
+      "type": "Fighting",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 340,
+      "name": "Bounce",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 341,
+      "name": "Mud Shot",
+      "type": "Ground",
+      "damage_class": "Special",
+      "power": 55
+    },
+    {
+      "id": 342,
+      "name": "Poison Tail",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 343,
+      "name": "Covet",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 344,
+      "name": "Volt Tackle",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 345,
+      "name": "Magical Leaf",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 346,
+      "name": "Water Sport",
+      "type": "Water",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 347,
+      "name": "Calm Mind",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 348,
+      "name": "Leaf Blade",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 349,
+      "name": "Dragon Dance",
+      "type": "Dragon",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 350,
+      "name": "Rock Blast",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 25
+    },
+    {
+      "id": 351,
+      "name": "Shock Wave",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 352,
+      "name": "Water Pulse",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 353,
+      "name": "Doom Desire",
+      "type": "Steel",
+      "damage_class": "Special",
+      "power": 140
+    },
+    {
+      "id": 354,
+      "name": "Psycho Boost",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 140
+    },
+    {
+      "id": 355,
+      "name": "Roost",
+      "type": "Flying",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 356,
+      "name": "Gravity",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 357,
+      "name": "Miracle Eye",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 358,
+      "name": "Wake-Up Slap",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 359,
+      "name": "Hammer Arm",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 360,
+      "name": "Gyro Ball",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 361,
+      "name": "Healing Wish",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 362,
+      "name": "Brine",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 363,
+      "name": "Natural Gift",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 364,
+      "name": "Feint",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 30
+    },
+    {
+      "id": 365,
+      "name": "Pluck",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 366,
+      "name": "Tailwind",
+      "type": "Flying",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 367,
+      "name": "Acupressure",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 368,
+      "name": "Metal Burst",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 369,
+      "name": "U-turn",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 370,
+      "name": "Close Combat",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 371,
+      "name": "Payback",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 372,
+      "name": "Assurance",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 373,
+      "name": "Embargo",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 374,
+      "name": "Fling",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 375,
+      "name": "Psycho Shift",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 376,
+      "name": "Trump Card",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 377,
+      "name": "Heal Block",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 378,
+      "name": "Wring Out",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 379,
+      "name": "Power Trick",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 380,
+      "name": "Gastro Acid",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 381,
+      "name": "Lucky Chant",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 382,
+      "name": "Me First",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 383,
+      "name": "Copycat",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 384,
+      "name": "Power Swap",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 385,
+      "name": "Guard Swap",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 386,
+      "name": "Punishment",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 387,
+      "name": "Last Resort",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 140
+    },
+    {
+      "id": 388,
+      "name": "Worry Seed",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 389,
+      "name": "Sucker Punch",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 390,
+      "name": "Toxic Spikes",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 391,
+      "name": "Heart Swap",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 392,
+      "name": "Aqua Ring",
+      "type": "Water",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 393,
+      "name": "Magnet Rise",
+      "type": "Electric",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 394,
+      "name": "Flare Blitz",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 395,
+      "name": "Force Palm",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 396,
+      "name": "Aura Sphere",
+      "type": "Fighting",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 397,
+      "name": "Rock Polish",
+      "type": "Rock",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 398,
+      "name": "Poison Jab",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 399,
+      "name": "Dark Pulse",
+      "type": "Dark",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 400,
+      "name": "Night Slash",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 401,
+      "name": "Aqua Tail",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 402,
+      "name": "Seed Bomb",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 403,
+      "name": "Air Slash",
+      "type": "Flying",
+      "damage_class": "Special",
+      "power": 75
+    },
+    {
+      "id": 404,
+      "name": "X-Scissor",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 405,
+      "name": "Bug Buzz",
+      "type": "Bug",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 406,
+      "name": "Dragon Pulse",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 85
+    },
+    {
+      "id": 407,
+      "name": "Dragon Rush",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 408,
+      "name": "Power Gem",
+      "type": "Rock",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 409,
+      "name": "Drain Punch",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 410,
+      "name": "Vacuum Wave",
+      "type": "Fighting",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 411,
+      "name": "Focus Blast",
+      "type": "Fighting",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 412,
+      "name": "Energy Ball",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 413,
+      "name": "Brave Bird",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 414,
+      "name": "Earth Power",
+      "type": "Ground",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 415,
+      "name": "Switcheroo",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 416,
+      "name": "Giga Impact",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 150
+    },
+    {
+      "id": 417,
+      "name": "Nasty Plot",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 418,
+      "name": "Bullet Punch",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 419,
+      "name": "Avalanche",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 420,
+      "name": "Ice Shard",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 421,
+      "name": "Shadow Claw",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 422,
+      "name": "Thunder Fang",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 423,
+      "name": "Ice Fang",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 424,
+      "name": "Fire Fang",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 425,
+      "name": "Shadow Sneak",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 426,
+      "name": "Mud Bomb",
+      "type": "Ground",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 427,
+      "name": "Psycho Cut",
+      "type": "Psychic",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 428,
+      "name": "Zen Headbutt",
+      "type": "Psychic",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 429,
+      "name": "Mirror Shot",
+      "type": "Steel",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 430,
+      "name": "Flash Cannon",
+      "type": "Steel",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 431,
+      "name": "Rock Climb",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 432,
+      "name": "Defog",
+      "type": "Flying",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 433,
+      "name": "Trick Room",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 434,
+      "name": "Draco Meteor",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 130
+    },
+    {
+      "id": 435,
+      "name": "Discharge",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 436,
+      "name": "Lava Plume",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 437,
+      "name": "Leaf Storm",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 130
+    },
+    {
+      "id": 438,
+      "name": "Power Whip",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 439,
+      "name": "Rock Wrecker",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 150
+    },
+    {
+      "id": 440,
+      "name": "Cross Poison",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 441,
+      "name": "Gunk Shot",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 442,
+      "name": "Iron Head",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 443,
+      "name": "Magnet Bomb",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 444,
+      "name": "Stone Edge",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 445,
+      "name": "Captivate",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 446,
+      "name": "Stealth Rock",
+      "type": "Rock",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 447,
+      "name": "Grass Knot",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 448,
+      "name": "Chatter",
+      "type": "Flying",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 449,
+      "name": "Judgment",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 450,
+      "name": "Bug Bite",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 451,
+      "name": "Charge Beam",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 50
+    },
+    {
+      "id": 452,
+      "name": "Wood Hammer",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 453,
+      "name": "Aqua Jet",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 454,
+      "name": "Attack Order",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 455,
+      "name": "Defend Order",
+      "type": "Bug",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 456,
+      "name": "Heal Order",
+      "type": "Bug",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 457,
+      "name": "Head Smash",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 150
+    },
+    {
+      "id": 458,
+      "name": "Double Hit",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 35
+    },
+    {
+      "id": 459,
+      "name": "Roar of Time",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 460,
+      "name": "Spacial Rend",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 461,
+      "name": "Lunar Dance",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 462,
+      "name": "Crush Grip",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 463,
+      "name": "Magma Storm",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 464,
+      "name": "Dark Void",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 465,
+      "name": "Seed Flare",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 466,
+      "name": "Ominous Wind",
+      "type": "Ghost",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 467,
+      "name": "Shadow Force",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 468,
+      "name": "Hone Claws",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 469,
+      "name": "Wide Guard",
+      "type": "Rock",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 470,
+      "name": "Guard Split",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 471,
+      "name": "Power Split",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 472,
+      "name": "Wonder Room",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 473,
+      "name": "Psyshock",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 474,
+      "name": "Venoshock",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 475,
+      "name": "Autotomize",
+      "type": "Steel",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 476,
+      "name": "Rage Powder",
+      "type": "Bug",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 477,
+      "name": "Telekinesis",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 478,
+      "name": "Magic Room",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 479,
+      "name": "Smack Down",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 480,
+      "name": "Storm Throw",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 481,
+      "name": "Flame Burst",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 70
+    },
+    {
+      "id": 482,
+      "name": "Sludge Wave",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 95
+    },
+    {
+      "id": 483,
+      "name": "Quiver Dance",
+      "type": "Bug",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 484,
+      "name": "Heavy Slam",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 485,
+      "name": "Synchronoise",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 486,
+      "name": "Electro Ball",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 487,
+      "name": "Soak",
+      "type": "Water",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 488,
+      "name": "Flame Charge",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 489,
+      "name": "Coil",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 490,
+      "name": "Low Sweep",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 491,
+      "name": "Acid Spray",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 492,
+      "name": "Foul Play",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 95
+    },
+    {
+      "id": 493,
+      "name": "Simple Beam",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 494,
+      "name": "Entrainment",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 495,
+      "name": "After You",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 496,
+      "name": "Round",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 497,
+      "name": "Echoed Voice",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 498,
+      "name": "Chip Away",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 499,
+      "name": "Clear Smog",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 50
+    },
+    {
+      "id": 500,
+      "name": "Stored Power",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 20
+    },
+    {
+      "id": 501,
+      "name": "Quick Guard",
+      "type": "Fighting",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 502,
+      "name": "Ally Switch",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 503,
+      "name": "Scald",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 504,
+      "name": "Shell Smash",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 505,
+      "name": "Heal Pulse",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 506,
+      "name": "Hex",
+      "type": "Ghost",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 507,
+      "name": "Sky Drop",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 508,
+      "name": "Shift Gear",
+      "type": "Steel",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 509,
+      "name": "Circle Throw",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 510,
+      "name": "Incinerate",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 511,
+      "name": "Quash",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 512,
+      "name": "Acrobatics",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 55
+    },
+    {
+      "id": 513,
+      "name": "Reflect Type",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 514,
+      "name": "Retaliate",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 515,
+      "name": "Final Gambit",
+      "type": "Fighting",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 516,
+      "name": "Bestow",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 517,
+      "name": "Inferno",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 518,
+      "name": "Water Pledge",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 519,
+      "name": "Fire Pledge",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 520,
+      "name": "Grass Pledge",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 521,
+      "name": "Volt Switch",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 70
+    },
+    {
+      "id": 522,
+      "name": "Struggle Bug",
+      "type": "Bug",
+      "damage_class": "Special",
+      "power": 50
+    },
+    {
+      "id": 523,
+      "name": "Bulldoze",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 524,
+      "name": "Frost Breath",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 525,
+      "name": "Dragon Tail",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 526,
+      "name": "Work Up",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 527,
+      "name": "Electroweb",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 55
+    },
+    {
+      "id": 528,
+      "name": "Wild Charge",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 529,
+      "name": "Drill Run",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 530,
+      "name": "Dual Chop",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 531,
+      "name": "Heart Stamp",
+      "type": "Psychic",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 532,
+      "name": "Horn Leech",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 533,
+      "name": "Sacred Sword",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 534,
+      "name": "Razor Shell",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 535,
+      "name": "Heat Crash",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 536,
+      "name": "Leaf Tornado",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 537,
+      "name": "Steamroller",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 538,
+      "name": "Cotton Guard",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 539,
+      "name": "Night Daze",
+      "type": "Dark",
+      "damage_class": "Special",
+      "power": 85
+    },
+    {
+      "id": 540,
+      "name": "Psystrike",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 541,
+      "name": "Tail Slap",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 25
+    },
+    {
+      "id": 542,
+      "name": "Hurricane",
+      "type": "Flying",
+      "damage_class": "Special",
+      "power": 110
+    },
+    {
+      "id": 543,
+      "name": "Head Charge",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 544,
+      "name": "Gear Grind",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 545,
+      "name": "Searing Shot",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 546,
+      "name": "Techno Blast",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 547,
+      "name": "Relic Song",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 75
+    },
+    {
+      "id": 548,
+      "name": "Secret Sword",
+      "type": "Fighting",
+      "damage_class": "Special",
+      "power": 85
+    },
+    {
+      "id": 549,
+      "name": "Glaciate",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 550,
+      "name": "Bolt Strike",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 130
+    },
+    {
+      "id": 551,
+      "name": "Blue Flare",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 130
+    },
+    {
+      "id": 552,
+      "name": "Fiery Dance",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 553,
+      "name": "Freeze Shock",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 140
+    },
+    {
+      "id": 554,
+      "name": "Ice Burn",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": 140
+    },
+    {
+      "id": 555,
+      "name": "Snarl",
+      "type": "Dark",
+      "damage_class": "Special",
+      "power": 55
+    },
+    {
+      "id": 556,
+      "name": "Icicle Crash",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 557,
+      "name": "V-create",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 180
+    },
+    {
+      "id": 558,
+      "name": "Fusion Flare",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 559,
+      "name": "Fusion Bolt",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 560,
+      "name": "Flying Press",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 561,
+      "name": "Mat Block",
+      "type": "Fighting",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 562,
+      "name": "Belch",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 563,
+      "name": "Rototiller",
+      "type": "Ground",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 564,
+      "name": "Sticky Web",
+      "type": "Bug",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 565,
+      "name": "Fell Stinger",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 566,
+      "name": "Phantom Force",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 567,
+      "name": "Trick-or-Treat",
+      "type": "Ghost",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 568,
+      "name": "Noble Roar",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 569,
+      "name": "Ion Deluge",
+      "type": "Electric",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 570,
+      "name": "Parabolic Charge",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 65
+    },
+    {
+      "id": 571,
+      "name": "Forest\u2019s Curse",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 572,
+      "name": "Petal Blizzard",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 573,
+      "name": "Freeze-Dry",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": 70
+    },
+    {
+      "id": 574,
+      "name": "Disarming Voice",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 575,
+      "name": "Parting Shot",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 576,
+      "name": "Topsy-Turvy",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 577,
+      "name": "Draining Kiss",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 50
+    },
+    {
+      "id": 578,
+      "name": "Crafty Shield",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 579,
+      "name": "Flower Shield",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 580,
+      "name": "Grassy Terrain",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 581,
+      "name": "Misty Terrain",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 582,
+      "name": "Electrify",
+      "type": "Electric",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 583,
+      "name": "Play Rough",
+      "type": "Fairy",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 584,
+      "name": "Fairy Wind",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 585,
+      "name": "Moonblast",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 95
+    },
+    {
+      "id": 586,
+      "name": "Boomburst",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 140
+    },
+    {
+      "id": 587,
+      "name": "Fairy Lock",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 588,
+      "name": "King\u2019s Shield",
+      "type": "Steel",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 589,
+      "name": "Play Nice",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 590,
+      "name": "Confide",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 591,
+      "name": "Diamond Storm",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 592,
+      "name": "Steam Eruption",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 110
+    },
+    {
+      "id": 593,
+      "name": "Hyperspace Hole",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 594,
+      "name": "Water Shuriken",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 15
+    },
+    {
+      "id": 595,
+      "name": "Mystical Fire",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 75
+    },
+    {
+      "id": 596,
+      "name": "Spiky Shield",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 597,
+      "name": "Aromatic Mist",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 598,
+      "name": "Eerie Impulse",
+      "type": "Electric",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 599,
+      "name": "Venom Drench",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 600,
+      "name": "Powder",
+      "type": "Bug",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 601,
+      "name": "Geomancy",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 602,
+      "name": "Magnetic Flux",
+      "type": "Electric",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 603,
+      "name": "Happy Hour",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 604,
+      "name": "Electric Terrain",
+      "type": "Electric",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 605,
+      "name": "Dazzling Gleam",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 606,
+      "name": "Celebrate",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 607,
+      "name": "Hold Hands",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 608,
+      "name": "Baby-Doll Eyes",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 609,
+      "name": "Nuzzle",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 20
+    },
+    {
+      "id": 610,
+      "name": "Hold Back",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 611,
+      "name": "Infestation",
+      "type": "Bug",
+      "damage_class": "Special",
+      "power": 20
+    },
+    {
+      "id": 612,
+      "name": "Power-Up Punch",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 613,
+      "name": "Oblivion Wing",
+      "type": "Flying",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 614,
+      "name": "Thousand Arrows",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 615,
+      "name": "Thousand Waves",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 616,
+      "name": "Land\u2019s Wrath",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 617,
+      "name": "Light of Ruin",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 140
+    },
+    {
+      "id": 618,
+      "name": "Origin Pulse",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 110
+    },
+    {
+      "id": 619,
+      "name": "Precipice Blades",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 620,
+      "name": "Dragon Ascent",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 621,
+      "name": "Hyperspace Fury",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 622,
+      "name": "Breakneck Blitz",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 623,
+      "name": "Breakneck Blitz",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 624,
+      "name": "All-Out Pummeling",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 625,
+      "name": "All-Out Pummeling",
+      "type": "Fighting",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 626,
+      "name": "Supersonic Skystrike",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 627,
+      "name": "Supersonic Skystrike",
+      "type": "Flying",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 628,
+      "name": "Acid Downpour",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 629,
+      "name": "Acid Downpour",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 630,
+      "name": "Tectonic Rage",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 631,
+      "name": "Tectonic Rage",
+      "type": "Ground",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 632,
+      "name": "Continental Crush",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 633,
+      "name": "Continental Crush",
+      "type": "Rock",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 634,
+      "name": "Savage Spin-Out",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 635,
+      "name": "Savage Spin-Out",
+      "type": "Bug",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 636,
+      "name": "Never-Ending Nightmare",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 637,
+      "name": "Never-Ending Nightmare",
+      "type": "Ghost",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 638,
+      "name": "Corkscrew Crash",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 639,
+      "name": "Corkscrew Crash",
+      "type": "Steel",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 640,
+      "name": "Inferno Overdrive",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 641,
+      "name": "Inferno Overdrive",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 642,
+      "name": "Hydro Vortex",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 643,
+      "name": "Hydro Vortex",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 644,
+      "name": "Bloom Doom",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 645,
+      "name": "Bloom Doom",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 646,
+      "name": "Gigavolt Havoc",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 647,
+      "name": "Gigavolt Havoc",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 648,
+      "name": "Shattered Psyche",
+      "type": "Psychic",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 649,
+      "name": "Shattered Psyche",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 650,
+      "name": "Subzero Slammer",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 651,
+      "name": "Subzero Slammer",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 652,
+      "name": "Devastating Drake",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 653,
+      "name": "Devastating Drake",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 654,
+      "name": "Black Hole Eclipse",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 655,
+      "name": "Black Hole Eclipse",
+      "type": "Dark",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 656,
+      "name": "Twinkle Tackle",
+      "type": "Fairy",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 657,
+      "name": "Twinkle Tackle",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 658,
+      "name": "Catastropika",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 210
+    },
+    {
+      "id": 659,
+      "name": "Shore Up",
+      "type": "Ground",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 660,
+      "name": "First Impression",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 661,
+      "name": "Baneful Bunker",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 662,
+      "name": "Spirit Shackle",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 663,
+      "name": "Darkest Lariat",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 664,
+      "name": "Sparkling Aria",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 665,
+      "name": "Ice Hammer",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 666,
+      "name": "Floral Healing",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 667,
+      "name": "High Horsepower",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 95
+    },
+    {
+      "id": 668,
+      "name": "Strength Sap",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 669,
+      "name": "Solar Blade",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 125
+    },
+    {
+      "id": 670,
+      "name": "Leafage",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 671,
+      "name": "Spotlight",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 672,
+      "name": "Toxic Thread",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 673,
+      "name": "Laser Focus",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 674,
+      "name": "Gear Up",
+      "type": "Steel",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 675,
+      "name": "Throat Chop",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 676,
+      "name": "Pollen Puff",
+      "type": "Bug",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 677,
+      "name": "Anchor Shot",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 678,
+      "name": "Psychic Terrain",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 679,
+      "name": "Lunge",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 680,
+      "name": "Fire Lash",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 681,
+      "name": "Power Trip",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 20
+    },
+    {
+      "id": 682,
+      "name": "Burn Up",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 130
+    },
+    {
+      "id": 683,
+      "name": "Speed Swap",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 684,
+      "name": "Smart Strike",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 685,
+      "name": "Purify",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 686,
+      "name": "Revelation Dance",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 687,
+      "name": "Core Enforcer",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 688,
+      "name": "Trop Kick",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 689,
+      "name": "Instruct",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 690,
+      "name": "Beak Blast",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 691,
+      "name": "Clanging Scales",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 110
+    },
+    {
+      "id": 692,
+      "name": "Dragon Hammer",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 693,
+      "name": "Brutal Swing",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 694,
+      "name": "Aurora Veil",
+      "type": "Ice",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 695,
+      "name": "Sinister Arrow Raid",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 180
+    },
+    {
+      "id": 696,
+      "name": "Malicious Moonsault",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 180
+    },
+    {
+      "id": 697,
+      "name": "Oceanic Operetta",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 195
+    },
+    {
+      "id": 698,
+      "name": "Guardian of Alola",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 699,
+      "name": "Soul-Stealing 7-Star Strike",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 195
+    },
+    {
+      "id": 700,
+      "name": "Stoked Sparksurfer",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 175
+    },
+    {
+      "id": 701,
+      "name": "Pulverizing Pancake",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 210
+    },
+    {
+      "id": 702,
+      "name": "Extreme Evoboost",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 703,
+      "name": "Genesis Supernova",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 185
+    },
+    {
+      "id": 704,
+      "name": "Shell Trap",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 705,
+      "name": "Fleur Cannon",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 130
+    },
+    {
+      "id": 706,
+      "name": "Psychic Fangs",
+      "type": "Psychic",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 707,
+      "name": "Stomping Tantrum",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 708,
+      "name": "Shadow Bone",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 709,
+      "name": "Accelerock",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 710,
+      "name": "Liquidation",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 711,
+      "name": "Prismatic Laser",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 160
+    },
+    {
+      "id": 712,
+      "name": "Spectral Thief",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 713,
+      "name": "Sunsteel Strike",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 714,
+      "name": "Moongeist Beam",
+      "type": "Ghost",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 715,
+      "name": "Tearful Look",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 716,
+      "name": "Zing Zap",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 717,
+      "name": "Nature\u2019s Madness",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 718,
+      "name": "Multi-Attack",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 719,
+      "name": "10,000,000 Volt Thunderbolt",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 195
+    },
+    {
+      "id": 720,
+      "name": "Mind Blown",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 721,
+      "name": "Plasma Fists",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 722,
+      "name": "Photon Geyser",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 723,
+      "name": "Light That Burns the Sky",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 200
+    },
+    {
+      "id": 724,
+      "name": "Searing Sunraze Smash",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 200
+    },
+    {
+      "id": 725,
+      "name": "Menacing Moonraze Maelstrom",
+      "type": "Ghost",
+      "damage_class": "Special",
+      "power": 200
+    },
+    {
+      "id": 726,
+      "name": "Let\u2019s Snuggle Forever",
+      "type": "Fairy",
+      "damage_class": "Physical",
+      "power": 190
+    },
+    {
+      "id": 727,
+      "name": "Splintered Stormshards",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 190
+    },
+    {
+      "id": 728,
+      "name": "Clangorous Soulblaze",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 185
+    },
+    {
+      "id": 729,
+      "name": "Zippy Zap",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 730,
+      "name": "Splishy Splash",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 731,
+      "name": "Floaty Fall",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 732,
+      "name": "Pika Papow",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": null
+    },
+    {
+      "id": 733,
+      "name": "Bouncy Bubble",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 734,
+      "name": "Buzzy Buzz",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 735,
+      "name": "Sizzly Slide",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 736,
+      "name": "Glitzy Glow",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 737,
+      "name": "Baddy Bad",
+      "type": "Dark",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 738,
+      "name": "Sappy Seed",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 739,
+      "name": "Freezy Frost",
+      "type": "Ice",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 740,
+      "name": "Sparkly Swirl",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 741,
+      "name": "Veevee Volley",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": null
+    },
+    {
+      "id": 742,
+      "name": "Double Iron Bash",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 743,
+      "name": "Max Guard",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 744,
+      "name": "Dynamax Cannon",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 745,
+      "name": "Snipe Shot",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 746,
+      "name": "Jaw Lock",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 747,
+      "name": "Stuff Cheeks",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 748,
+      "name": "No Retreat",
+      "type": "Fighting",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 749,
+      "name": "Tar Shot",
+      "type": "Rock",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 750,
+      "name": "Magic Powder",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 751,
+      "name": "Dragon Darts",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 752,
+      "name": "Teatime",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 753,
+      "name": "Octolock",
+      "type": "Fighting",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 754,
+      "name": "Bolt Beak",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 755,
+      "name": "Fishious Rend",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 756,
+      "name": "Court Change",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 757,
+      "name": "Max Flare",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 758,
+      "name": "Max Flutterby",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 759,
+      "name": "Max Lightning",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 760,
+      "name": "Max Strike",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 761,
+      "name": "Max Knuckle",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 762,
+      "name": "Max Phantasm",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 763,
+      "name": "Max Hailstorm",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 764,
+      "name": "Max Ooze",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 765,
+      "name": "Max Geyser",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 766,
+      "name": "Max Airstream",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 767,
+      "name": "Max Starfall",
+      "type": "Fairy",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 768,
+      "name": "Max Wyrmwind",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 769,
+      "name": "Max Mindstorm",
+      "type": "Psychic",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 770,
+      "name": "Max Rockfall",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 771,
+      "name": "Max Quake",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 772,
+      "name": "Max Darkness",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 773,
+      "name": "Max Overgrowth",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 774,
+      "name": "Max Steelspike",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 10
+    },
+    {
+      "id": 775,
+      "name": "Clangorous Soul",
+      "type": "Dragon",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 776,
+      "name": "Body Press",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 777,
+      "name": "Decorate",
+      "type": "Fairy",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 778,
+      "name": "Drum Beating",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 779,
+      "name": "Snap Trap",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 35
+    },
+    {
+      "id": 780,
+      "name": "Pyro Ball",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 781,
+      "name": "Behemoth Blade",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 782,
+      "name": "Behemoth Bash",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 783,
+      "name": "Aura Wheel",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 110
+    },
+    {
+      "id": 784,
+      "name": "Breaking Swipe",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 785,
+      "name": "Branch Poke",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 786,
+      "name": "Overdrive",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 787,
+      "name": "Apple Acid",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 788,
+      "name": "Grav Apple",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 789,
+      "name": "Spirit Break",
+      "type": "Fairy",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 790,
+      "name": "Strange Steam",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 791,
+      "name": "Life Dew",
+      "type": "Water",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 792,
+      "name": "Obstruct",
+      "type": "Dark",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 793,
+      "name": "False Surrender",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 794,
+      "name": "Meteor Assault",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 150
+    },
+    {
+      "id": 795,
+      "name": "Eternabeam",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 160
+    },
+    {
+      "id": 796,
+      "name": "Steel Beam",
+      "type": "Steel",
+      "damage_class": "Special",
+      "power": 140
+    },
+    {
+      "id": 797,
+      "name": "Expanding Force",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 798,
+      "name": "Steel Roller",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 130
+    },
+    {
+      "id": 799,
+      "name": "Scale Shot",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 25
+    },
+    {
+      "id": 800,
+      "name": "Meteor Beam",
+      "type": "Rock",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 801,
+      "name": "Shell Side Arm",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 802,
+      "name": "Misty Explosion",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 803,
+      "name": "Grassy Glide",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 55
+    },
+    {
+      "id": 804,
+      "name": "Rising Voltage",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 70
+    },
+    {
+      "id": 805,
+      "name": "Terrain Pulse",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 50
+    },
+    {
+      "id": 806,
+      "name": "Skitter Smack",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 807,
+      "name": "Burning Jealousy",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 70
+    },
+    {
+      "id": 808,
+      "name": "Lash Out",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 809,
+      "name": "Poltergeist",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 110
+    },
+    {
+      "id": 810,
+      "name": "Corrosive Gas",
+      "type": "Poison",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 811,
+      "name": "Coaching",
+      "type": "Fighting",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 812,
+      "name": "Flip Turn",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 813,
+      "name": "Triple Axel",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 20
+    },
+    {
+      "id": 814,
+      "name": "Dual Wingbeat",
+      "type": "Flying",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 815,
+      "name": "Scorching Sands",
+      "type": "Ground",
+      "damage_class": "Special",
+      "power": 70
+    },
+    {
+      "id": 816,
+      "name": "Jungle Healing",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": null
+    },
+    {
+      "id": 817,
+      "name": "Wicked Blow",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 818,
+      "name": "Surging Strikes",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 25
+    },
+    {
+      "id": 819,
+      "name": "Thunder Cage",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 820,
+      "name": "Dragon Energy",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 821,
+      "name": "Freezing Glare",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 822,
+      "name": "Fiery Wrath",
+      "type": "Dark",
+      "damage_class": "Special",
+      "power": 90
+    },
+    {
+      "id": 823,
+      "name": "Thunderous Kick",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 824,
+      "name": "Glacial Lance",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 825,
+      "name": "Astral Barrage",
+      "type": "Ghost",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 826,
+      "name": "Eerie Spell",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 827,
+      "name": "Dire Claw",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 828,
+      "name": "Psyshield Bash",
+      "type": "Psychic",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 829,
+      "name": "Power Shift",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 830,
+      "name": "Stone Axe",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 831,
+      "name": "Springtide Storm",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 832,
+      "name": "Mystical Power",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 70
+    },
+    {
+      "id": 833,
+      "name": "Raging Fury",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 834,
+      "name": "Wave Crash",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 835,
+      "name": "Chloroblast",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 150
+    },
+    {
+      "id": 836,
+      "name": "Mountain Gale",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 837,
+      "name": "Victory Dance",
+      "type": "Fighting",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 838,
+      "name": "Headlong Rush",
+      "type": "Ground",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 839,
+      "name": "Barb Barrage",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 840,
+      "name": "Esper Wing",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 841,
+      "name": "Bitter Malice",
+      "type": "Ghost",
+      "damage_class": "Special",
+      "power": 75
+    },
+    {
+      "id": 842,
+      "name": "Shelter",
+      "type": "Steel",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 843,
+      "name": "Triple Arrows",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 844,
+      "name": "Infernal Parade",
+      "type": "Ghost",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 845,
+      "name": "Ceaseless Edge",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 846,
+      "name": "Bleakwind Storm",
+      "type": "Flying",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 847,
+      "name": "Wildbolt Storm",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 848,
+      "name": "Sandsear Storm",
+      "type": "Ground",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 849,
+      "name": "Lunar Blessing",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 850,
+      "name": "Take Heart",
+      "type": "Psychic",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 851,
+      "name": "Tera Blast",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 852,
+      "name": "Silk Trap",
+      "type": "Bug",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 853,
+      "name": "Axe Kick",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 854,
+      "name": "Last Respects",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 855,
+      "name": "Lumina Crash",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 856,
+      "name": "Order Up",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 857,
+      "name": "Jet Punch",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 60
+    },
+    {
+      "id": 858,
+      "name": "Spicy Extract",
+      "type": "Grass",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 859,
+      "name": "Spin Out",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 860,
+      "name": "Population Bomb",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 20
+    },
+    {
+      "id": 861,
+      "name": "Ice Spinner",
+      "type": "Ice",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 862,
+      "name": "Glaive Rush",
+      "type": "Dragon",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 863,
+      "name": "Revival Blessing",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 864,
+      "name": "Salt Cure",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 40
+    },
+    {
+      "id": 865,
+      "name": "Triple Dive",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 30
+    },
+    {
+      "id": 866,
+      "name": "Mortal Spin",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 30
+    },
+    {
+      "id": 867,
+      "name": "Doodle",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 868,
+      "name": "Fillet Away",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 869,
+      "name": "Kowtow Cleave",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 85
+    },
+    {
+      "id": 870,
+      "name": "Flower Trick",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 871,
+      "name": "Torch Song",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 872,
+      "name": "Aqua Step",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 873,
+      "name": "Raging Bull",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 874,
+      "name": "Make It Rain",
+      "type": "Steel",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 875,
+      "name": "Psyblade",
+      "type": "Psychic",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 876,
+      "name": "Hydro Steam",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 877,
+      "name": "Ruination",
+      "type": "Dark",
+      "damage_class": "Special",
+      "power": 1
+    },
+    {
+      "id": 878,
+      "name": "Collision Course",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 879,
+      "name": "Electro Drift",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 100
+    },
+    {
+      "id": 880,
+      "name": "Shed Tail",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 881,
+      "name": "Chilly Reception",
+      "type": "Ice",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 882,
+      "name": "Tidy Up",
+      "type": "Normal",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 883,
+      "name": "Snowscape",
+      "type": "Ice",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 884,
+      "name": "Pounce",
+      "type": "Bug",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 885,
+      "name": "Trailblaze",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 886,
+      "name": "Chilling Water",
+      "type": "Water",
+      "damage_class": "Special",
+      "power": 50
+    },
+    {
+      "id": 887,
+      "name": "Hyper Drill",
+      "type": "Normal",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 888,
+      "name": "Twin Beam",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 40
+    },
+    {
+      "id": 889,
+      "name": "Rage Fist",
+      "type": "Ghost",
+      "damage_class": "Physical",
+      "power": 50
+    },
+    {
+      "id": 890,
+      "name": "Armor Cannon",
+      "type": "Fire",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 891,
+      "name": "Bitter Blade",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 90
+    },
+    {
+      "id": 892,
+      "name": "Double Shock",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 120
+    },
+    {
+      "id": 893,
+      "name": "Gigaton Hammer",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 160
+    },
+    {
+      "id": 894,
+      "name": "Comeuppance",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 1
+    },
+    {
+      "id": 895,
+      "name": "Aqua Cutter",
+      "type": "Water",
+      "damage_class": "Physical",
+      "power": 70
+    },
+    {
+      "id": 896,
+      "name": "Blazing Torque",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 897,
+      "name": "Wicked Torque",
+      "type": "Dark",
+      "damage_class": "Physical",
+      "power": 80
+    },
+    {
+      "id": 898,
+      "name": "Noxious Torque",
+      "type": "Poison",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 899,
+      "name": "Combat Torque",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 900,
+      "name": "Magical Torque",
+      "type": "Fairy",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 901,
+      "name": "Blood Moon",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 140
+    },
+    {
+      "id": 902,
+      "name": "Matcha Gotcha",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 903,
+      "name": "Syrup Bomb",
+      "type": "Grass",
+      "damage_class": "Special",
+      "power": 60
+    },
+    {
+      "id": 904,
+      "name": "Ivy Cudgel",
+      "type": "Grass",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 905,
+      "name": "Electro Shot",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 130
+    },
+    {
+      "id": 906,
+      "name": "Tera Starstorm",
+      "type": "Normal",
+      "damage_class": "Special",
+      "power": 120
+    },
+    {
+      "id": 907,
+      "name": "Fickle Beam",
+      "type": "Dragon",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 908,
+      "name": "Burning Bulwark",
+      "type": "Fire",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 909,
+      "name": "Thunderclap",
+      "type": "Electric",
+      "damage_class": "Special",
+      "power": 70
+    },
+    {
+      "id": 910,
+      "name": "Mighty Cleave",
+      "type": "Rock",
+      "damage_class": "Physical",
+      "power": 95
+    },
+    {
+      "id": 911,
+      "name": "Tachyon Cutter",
+      "type": "Steel",
+      "damage_class": "Special",
+      "power": 50
+    },
+    {
+      "id": 912,
+      "name": "Hard Press",
+      "type": "Steel",
+      "damage_class": "Physical",
+      "power": 0
+    },
+    {
+      "id": 913,
+      "name": "Dragon Cheer",
+      "type": "Dragon",
+      "damage_class": "Status",
+      "power": 0
+    },
+    {
+      "id": 914,
+      "name": "Alluring Voice",
+      "type": "Fairy",
+      "damage_class": "Special",
+      "power": 80
+    },
+    {
+      "id": 915,
+      "name": "Temper Flare",
+      "type": "Fire",
+      "damage_class": "Physical",
+      "power": 75
+    },
+    {
+      "id": 916,
+      "name": "Supercell Slam",
+      "type": "Electric",
+      "damage_class": "Physical",
+      "power": 100
+    },
+    {
+      "id": 917,
+      "name": "Psychic Noise",
+      "type": "Psychic",
+      "damage_class": "Special",
+      "power": 75
+    },
+    {
+      "id": 918,
+      "name": "Upper Hand",
+      "type": "Fighting",
+      "damage_class": "Physical",
+      "power": 65
+    },
+    {
+      "id": 919,
+      "name": "Malignant Chain",
+      "type": "Poison",
+      "damage_class": "Special",
+      "power": 100
+    }
+  ]
+    

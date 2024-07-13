@@ -4,6 +4,7 @@
 let allPokemon;
 let defensiveEffectivenessChart;
 let offensiveEffectivenessChart;
+let moveDetails;
 let elementRegistry = {};
 
 // --------------------------------------------------------------------------- // 
@@ -45,6 +46,7 @@ if (touchControlsElement) {
 
             const externalState = touchControlsElement.getAttribute('data-ui-mode');
             mainLoop(externalState); 
+            //console.log(fetchMoveDetails(55))
         });
     });
 
@@ -63,6 +65,7 @@ async function loadResources() {
 	allPokemon = await getResource('json/pokemon_cache.json');
     defensiveEffectivenessChart = await getResource('json/defensive_effectiveness_chart.json'); 
     offensiveEffectivenessChart = await getResource('json/offensive_effectiveness_chart.json'); 
+    moveDetails = await getResource('json/pokemon_moves_cache.json'); 
 }
 
 async function setupExtension()
@@ -99,7 +102,7 @@ function mainLoop(newExternalState)
             const isOffensive = toggleIcon.alt === "Offensive";
 
             updatePokemonEffectivenessGrid("party-effectiveness-grid", sessionData, isOffensive);
-            updateRoundCounter(sessionData);
+            updateRoundCounter(sessionData); 
         } 
     
         for(var elementId in elementRegistry) 
@@ -154,20 +157,43 @@ function getDefensiveEffectiveness(types) {
     return multiplied
 }
 
-function getOffensiveEffectiveness(types) {
-    let effectiveness = {};
-    for (let type in Types) {
-        effectiveness[capitalize(type)] = 1;
-    }
-    
-    types.forEach(type => {
-        for (let defenderType in offensiveEffectivenessChart[type]) {
-            let multiplier = offensiveEffectivenessChart[type][defenderType];
-            effectiveness[defenderType] *= multiplier;
+function getOffensiveEffectiveness(moveset) {
+
+    let typeArray = [];
+
+    for (let i = 0; i < 4; i++) {
+
+        let moveId = moveset[i].moveId;
+        let move = moveDetails.find(m => m.id === moveId);
+
+        let movePower = move.power;
+        let moveType = move.type;
+
+        if (movePower > 0) {
+            typeArray.push(offensiveEffectivenessChart[moveType])
         }
+        else {
+            typeArray.push(offensiveEffectivenessChart["Normal"]) //Normal is pulled as it has no offensive effectiveness
+        }
+    }
+
+    let highestValues = {};
+
+    Object.keys(offensiveEffectivenessChart).forEach(type => {
+        let maxEffectiveness = 0;
+
+        for (let i = 0; i < typeArray.length; i++) {
+            let effectiveness = typeArray[i][type] || 1; // Default to 1 if type is not in typeArray[i]
+
+            if (effectiveness > maxEffectiveness) {
+                maxEffectiveness = effectiveness;
+            }
+        }
+
+        highestValues[type] = maxEffectiveness;
     });
-    
-    return effectiveness;
+
+    return highestValues;
 }
 
 function getWeakTypes( types )
@@ -327,7 +353,7 @@ function updateElementImg(element, newSrc, newAlt)
 
 function updatePokemonEffectivenessGrid(id, data, isOffensive) {
     let sortedPokemon = data.party.map((pokemon) => pokemon.species).sort();
-    
+
     // For each pokemon
     for (let i = 0; i < 6; i++) {
         let startingIndex = 19*(i+1); 
@@ -337,7 +363,9 @@ function updatePokemonEffectivenessGrid(id, data, isOffensive) {
 
             let effectiveTypes;
             if (isOffensive) {
-                effectiveTypes = getOffensiveEffectiveness(pokemonTypes);
+                moveset = data.party[i].moveset
+                console.log('moveset: ' + moveset)
+                effectiveTypes = getOffensiveEffectiveness(moveset);
             } else {
                 effectiveTypes = getDefensiveEffectiveness(pokemonTypes);
             }
