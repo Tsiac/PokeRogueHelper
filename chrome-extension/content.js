@@ -352,19 +352,20 @@ function updateElementImg(element, newSrc, newAlt)
 }
 
 function updatePokemonEffectivenessGrid(id, data, isOffensive) {
-    let sortedPokemon = data.party.map((pokemon) => pokemon.species).sort();
+    let sortedPokemon = data.party.sort(function(a, b) { 
+        return a.species - b.species;
+    });
 
     // For each pokemon
     for (let i = 0; i < 6; i++) {
         let startingIndex = 19*(i+1); 
         if(i < sortedPokemon.length) {
-            const pokemonId = sortedPokemon[i]; 
+            const pokemonId = sortedPokemon[i].species; 
             const pokemonTypes = findPokemonType(pokemonId);
 
             let effectiveTypes;
             if (isOffensive) {
-                moveset = data.party[i].moveset
-                console.log('moveset: ' + moveset)
+                moveset = sortedPokemon[i].moveset;
                 effectiveTypes = getOffensiveEffectiveness(moveset);
             } else {
                 effectiveTypes = getDefensiveEffectiveness(pokemonTypes);
