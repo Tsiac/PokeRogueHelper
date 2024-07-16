@@ -161,7 +161,7 @@ function getOffensiveEffectiveness(moveset) {
 
     let typeArray = [];
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < moveset.length; i++) {
 
         let moveId = moveset[i].moveId;
         let move = moveDetails.find(m => m.id === moveId);
